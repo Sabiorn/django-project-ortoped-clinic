@@ -1,0 +1,42 @@
+
+
+/* Ваш CSS файл (например, index.css) */
+body {
+    background-image: url("../images/background1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+  }
+
+/* Стили для боковой панели */
+.offcanvas {
+    background-color: hsla(207, 74%, 57%, 0.9) !important; /* Цвет фона боковой панели */
+    color: #000000 !important; /* Цвет текста в боковой панели */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.offcanvas .nav-link {
+    color: #030303 !important; /* Цвет текста ссылок */
+}
+
+/* Стили для навигационной панели */
+.navbar-custom {
+    background-color: hsla(207, 74%, 57%, 0.8) !important; /* Цвет фона навигационной панели */
+    color: #000000 !important; /* Цвет текста */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+/* Стили для футера */
+.footer-custom {
+    background-color: hsla(207, 74%, 57%, 0.8) !important; /* Цвет фона футера */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.footer-custom p {
+    color: hsl(0, 0%, 0%) !important; /* Цвет текста */
+}

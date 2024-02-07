@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "images/mal.png" %}">
+    <link rel="stylesheet" href="{% static '/css/index.css' %}"> <!-- Ссылка на ваш CSS файл -->
+    <title> Ортопедический Центр </title>
+    <style>
+        /* Стили для выравнивания по центру */
+        .container-custom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Выравниваем по вертикали на всю высоту экрана */
+        }
+
+        /* Стили для блока контента */
+        .content-block {
+            max-width: 600px; /* Максимальная ширина блока контента */
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень */
+        }
+
+        /* Стили для футера */
+        .footer-custom {
+            position: absolute; /* Помещаем футер внизу страницы */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Навигационная панель -->
+        <nav class="navbar navbar-dark bg-dark navbar-custom fixed-top">
+            <div class="container-fluid">
+                <!-- Логотип -->
+                <a class="navbar-brand" href="/">
+                    <img src="{% static 'images/mal.png' %}" alt="Logo"> <!-- Вместо 'path/to/your/image.jpg' укажите путь к вашему изображению -->
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Контейнер для выравнивания по центру -->
+    <div class="container-custom">
+        <div class="content-block">
+            <h2 class="mb-4"><strong>{{ content }}</strong></h2>
+            <p>{{ text_on_page }}</p>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="py-4 bg-dark footer-custom">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Медицинский центр неврологии и ортопедии</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
