@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "images/mal.png" %}">
+    <link rel="stylesheet" href="{% static '/css/index.css' %}"> <!-- Ссылка на ваш CSS файл -->
+    <title>{{ title }}</title>
+</head>
+<body>
+<header>
+    <div class="col-lg-8 col-md-12 mt-5 pt-5">
+        <nav class="navbar navbar-dark bg-dark navbar-custom fixed-top" style="z-index: 1000;">
+            <div class="container-fluid">
+                <!-- Логотип -->
+                <a class="navbar-brand" href="/">
+                    <img src="{% static 'images/mal.png' %}" alt="Logo">
+                </a>
+                <div class="d-flex justify-content-end align-items-center flex-grow-1">
+                    <p class="navbar-text mr-3">Медицинский центр неврологии и ортопедии</p>
+                <!-- Ссылки -->
+                <div class="d-flex justify-content-center align-items-center flex-grow-1">
+                    <a class="nav-link mx-3" href="/">Главная</a>
+                    <!-- Медицинские услуги с выпадающим списком -->
+                    <div class="dropdown">
+                        <a class="nav-link mx-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLinkServices" data-bs-toggle="dropdown" aria-expanded="false">
+                        Консультации специалистов
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkServices">
+                            <li><a class="dropdown-item" href="#">Невролог</a></li>
+                            <li><a class="dropdown-item" href="#">Кардиолог</a></li>
+                            <li><a class="dropdown-item" href="#">Терапевт</a></li>
+                            <li><a class="dropdown-item" href="#">Хирург</a></li>
+                            <li><a class="dropdown-item" href="#">Онколог</a></li>
+                            <li><a class="dropdown-item" href="#">Психолог</a></li>
+                        </ul>
+                    </div>
+                    <!-- Профили лечения -->
+                    <div class="dropdown">
+                        <a class="nav-link mx-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLinkTreatment" data-bs-toggle="dropdown" aria-expanded="false">
+                        Наши услуги
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkTreatment">
+                            <li><a class="dropdown-item" href="#">Лабораторная диагностика (CL LAB)</a></li>
+                            <li><a class="dropdown-item" href="#">Рентгенологическое исследование</a></li>
+                            <li><a class="dropdown-item" href="#">Локальная инъекционная терапия (ЛИТ)</a></li>
+                            <li><a class="dropdown-item" href="#">Инъекционная терапия</a></li>
+                            <li><a class="dropdown-item" href="#">Немедикаментозное лечение</a></li>
+                            <li><a class="dropdown-item" href="#">Функциональная диагностика</a></li>
+                        </ul>
+                    </div>
+                    <!-- Еще -->
+                    <div class="dropdown">
+                        <a class="nav-link mx-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLinkMore" data-bs-toggle="dropdown" aria-expanded="false">
+                            Еще
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkMore">
+                            <li><a class="dropdown-item" href="#">Элемент 1</a></li>
+                            <li><a class="dropdown-item" href="#">Элемент 2</a></li>
+                            <li><a class="dropdown-item" href="#">Элемент 3</a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link mx-3" href="{% url "main:about" %}">О нас</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+    <section>
+        {% block content %}
+        {% endblock content %}
+    </section>
+{% comment %} <footer class="py-4 bg-dark footer-custom fixed-bottom">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Медицинский центр неврологии и ортопедии</p>
+    </div>
+</footer> {% endcomment %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+

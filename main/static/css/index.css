@@ -1,42 +1,92 @@
-
-
-/* Ваш CSS файл (например, index.css) */
+@import url(
+    'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+    );
+    
 body {
+    font-family: Roboto, serif;
     background-image: url("../images/background1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     height: 100%;
-  }
-
-/* Стили для боковой панели */
-.offcanvas {
-    background-color: hsla(207, 74%, 57%, 0.9) !important; /* Цвет фона боковой панели */
-    color: #000000 !important; /* Цвет текста в боковой панели */
-    border-radius: 10px; /* Скругление углов */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+    margin: 20px;
 }
 
-.offcanvas .nav-link {
-    color: #030303 !important; /* Цвет текста ссылок */
+.navbar {
+  margin-bottom: -10px; /* Отступ снизу от навигационной панели */
+
 }
 
-/* Стили для навигационной панели */
+/* Дополнительные стили, если необходимо */
+
+
 .navbar-custom {
-    background-color: hsla(207, 74%, 57%, 0.8) !important; /* Цвет фона навигационной панели */
-    color: #000000 !important; /* Цвет текста */
-    border-radius: 10px; /* Скругление углов */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+  background-color: rgb(255, 255, 255) !important; 
+  color: #000000 !important; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+.navbar-text {
+  color: rgb(0, 0, 0);
+  font-weight: bold; /* Жирный текст */
+  font-size: 22px; /* Крупный размер шрифта */
 }
 
-/* Стили для футера */
+  
+
+.carousel {
+    margin-top: 25px;
+    max-width: 100%; /* Изменено на 100% */
+    background-color: #ffffff;
+    padding: 10px; /* Увеличиваем внутренний отступ */
+    border-radius: 10px;
+}
+
+  
+  /* Стили для текста внутри карусели */
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+  }
+  .card {
+    margin-bottom: 30px; /* Отступ между карточками */
+    margin-top: 25px;
+    color: inherit; /* Используем цвет ссылки по умолчанию */
+    text-decoration: none; /* Убираем подчеркивание */
+    background-color: #ffffffc2; /* Цвет фона карточки */
+}
+
+.card-title {
+    font-size: 30px; /* Размер заголовка карточки */
+}
+
+
+.card-body a {
+    color: #000000; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    padding: 15px;
+}
+
+.card-body a:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+  
+  /* Настройки для отступа от навигационной панели */
+
+
 .footer-custom {
-    background-color: hsla(207, 74%, 57%, 0.8) !important; /* Цвет фона футера */
-    border-radius: 10px; /* Скругление углов */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+    background-color: hsla(0, 0%, 95%, 0.8) !important; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .footer-custom p {
-    color: hsl(0, 0%, 0%) !important; /* Цвет текста */
-}
+    color: hsl(0, 0%, 0%) !important; 
+} 
+
