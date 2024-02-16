@@ -1,7 +1,6 @@
-@import url(
-    'https://fonts.googleapis.com/css?family=Roboto&display=swap'
-    );
-    
+/* Глобальные стили */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
     font-family: Roboto, serif;
     background-image: url("../images/background1.jpg");
@@ -13,80 +12,145 @@ body {
     margin: 20px;
 }
 
-.navbar {
-  margin-bottom: -10px; /* Отступ снизу от навигационной панели */
-
+/* Карточки */
+.card {
+    border-radius: 25px;
+    overflow: hidden;
 }
 
-/* Дополнительные стили, если необходимо */
+/* Цвета для карточек */
+.bg-blue {
+    background-color: #14a8bb47;
+}
 
+.bg-green {
+    background-color: #24a86f34;
+}
+
+.bg-yellow {
+    background-color: #f7954036;
+}
+
+.bg-purple {
+    background-color: #f04e5b38;
+}
+
+/* Навигационная панель */
+.navbar {
+    margin-bottom: -10px;
+}
 
 .navbar-custom {
-  background-color: rgb(255, 255, 255) !important; 
-  color: #000000 !important; 
-  border-radius: 10px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    background-color: rgb(255, 255, 255) !important;
+    color: #000000 !important;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .navbar-text {
-  color: rgb(0, 0, 0);
-  font-weight: bold; /* Жирный текст */
-  font-size: 22px; /* Крупный размер шрифта */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 22px;
 }
 
-  
-
-.carousel {
-    margin-top: 25px;
-    max-width: 100%; /* Изменено на 100% */
-    background-color: #ffffff;
-    padding: 10px; /* Увеличиваем внутренний отступ */
+/* Контейнер текста */
+.text-container {
+    color: rgb(0, 0, 0);
+    padding: 20px;
     border-radius: 10px;
 }
 
-  
-  /* Стили для текста внутри карусели */
-  .carousel-caption {
+/* Карусель */
+.carousel {
+    margin-top: 25px;
+    max-width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 500px;
+}
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-caption {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 15px;
-  }
-  .card {
-    margin-bottom: 30px; /* Отступ между карточками */
-    margin-top: 25px;
-    color: inherit; /* Используем цвет ссылки по умолчанию */
-    text-decoration: none; /* Убираем подчеркивание */
-    background-color: #ffffffc2; /* Цвет фона карточки */
 }
 
-.card-title {
-    font-size: 30px; /* Размер заголовка карточки */
+/* Текст в карточках */
+.card-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+/* Тело карточки */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-.card-body a {
-    color: #000000; /* Цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
+/* Кнопки */
+.btn {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #0bd3e1e0;
+}
+
+.btn-primary {
+    font-size: 15px;
     padding: 15px;
 }
 
-.card-body a:hover {
-    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+.btn:hover {
+    background-color: white;
+    color: #007bff;
 }
 
-  
-  /* Настройки для отступа от навигационной панели */
-
-
+/* Подвал */
 .footer-custom {
-    background-color: hsla(0, 0%, 95%, 0.8) !important; 
-    border-radius: 10px; 
+    background-color: hsla(0, 0%, 95%, 0.8) !important;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .footer-custom p {
-    color: hsl(0, 0%, 0%) !important; 
-} 
+    color: hsl(0, 0%, 0%) !important;
+}
 
+/* Фигуры и блоки */
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Рамка внизу */
+hr.only-one {
+    border-color: #ffffff84 !important;
+    border-width: 3px !important;
+    opacity: 0.75 !important;
+}
+
+.border-primary {
+    margin: 50px;
+}

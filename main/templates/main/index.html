@@ -5,35 +5,29 @@
 <div class="container-fluid carousel-container">
   <div class="row justify-content-center">
     <!-- Левые контейнеры -->
-    <div class="col-lg-2 col-md-12">
-      <div class="card mb-3">
-        <div class="card-body">
-          <a href="#">Аппаратное исследование</a>
+    <div class="col-lg-2 col-md-12 mt-md-4">
+      <div class="card mb-3" style="width: 18rem;">
+        <div class="card-body bg-green">
+          <h5 class="card-title">Невролог</h5>
+          <p class="card-text">Лечение заболевания нервной системы, позвоночника и сосудов головного мозга.</p>
+          <a href="#" class="btn btn-primary"> Запись </a>
         </div>
       </div>
-      <div class="card mb-3">
-        <div class="card-body">
-          <a href="#">Озонотерапия</a>
+      <div class="card mb-3" style="width: 18rem;">
+        <div class="card-body bg-blue">
+          <h5 class="card-title">Кардиолог</h5>
+          <p class="card-text">Специалист по сердцу: диагностика, лечение, профилактика болезней.</p>
+          <a href="#" class="btn btn-primary">Запись</a>
         </div>
       </div>
-      <div class="card">
-        <div class="card-body">
-          <a href="#">Остеопатия</a>
-        </div>
-      </div>
-      <div class="card mb-3">
-        <div class="card-body">
-          <a href="#">Реоэнцефалография</a>
-        </div>
-      </div>
-    </div> 
-
+    </div>
+    
     <!-- Карусель -->
     <div class="col-lg-6 col-md-12">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="{% static "images/slide.jpg" %}" class="d-block w-100" alt="...">
+            <img src="{% static "images/gymm.jpg" %}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block text-red bg-yellow">
               <h5>У нас работают лучшие специалисты.</h5>
               <p>Пациентов нашей клиники встречают и консультируют приветливые администраторы, лечат – внимательные и компетентные врачи.</p>
@@ -66,28 +60,38 @@
     </div>
 
     <!-- Правые контейнеры -->
-    <div class="col-lg-2 col-md-12">
-      <div class="card mb-3">
-        <div class="card-body">
-          <a href="#">Консультации специалистов</a>
+    <div class="col-lg-2 col-md-12 mt-md-4">
+      <div class="card mb-3" style="width: 18rem;">
+        <div class="card-body bg-yellow">
+          <h5 class="card-title">Психолог</h5>
+          <p class="card-text">помощь в решении психологических проблем, поддержка в кризисных ситуациях, развитие личности.</p>
+          <a href="#" class="btn btn-primary">Запись</a>
         </div>
       </div>
-      <div class="card mb-3">
-        <div class="card-body">
-          <a href="#">Иглорефлексотерапия</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <a href="#">Кинезиотерапия</a>
-        </div>
-      </div>
-      <div class="card mb-3">
-        <div class="card-body">
-          <a href="#">Электроэнцефалография</a>
+      <div class="card mb-3" style="width: 18rem;">
+        <div class="card-body bg-purple">
+          <h5 class="card-title">Гастроэнтеролог</h5>
+          <p class="card-text">Специалист по лечению нарушений ЖКТ.</p>
+          <a href="#" class="btn btn-primary">Запись</a>
         </div>
       </div>
     </div>
+    
   </div>
 </div>
+
+<hr class="border border-primary only-one">
+
+<div class="container">
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <p>В удобное для вас время, вы можете посетить врачей разных специальностей, получить квалифицированные медицинские услуги и посетить оздоровительно-тренажерный зал.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Малик Мс <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>
+</div>
+
+
 {% endblock content %}
