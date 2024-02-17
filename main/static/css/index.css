@@ -2,37 +2,34 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
-    font-family: Roboto, serif;
-    background-image: url("../images/background1.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    height: 100%;
-    margin: 20px;
+  font-family: Roboto, serif;
+  background-color: #f9faff; /* Чисто белый цвет фона */
+  height: 100%;
+  margin: 20px;
 }
 
 /* Карточки */
 .card {
     border-radius: 25px;
     overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* тени */
 }
 
 /* Цвета для карточек */
 .bg-blue {
-    background-color: #14a8bb47;
+    background-color: white;
 }
 
 .bg-green {
-    background-color: #24a86f34;
+    background-color: white;
 }
 
 .bg-yellow {
-    background-color: #f7954036;
+    background-color: white;
 }
 
 .bg-purple {
-    background-color: #f04e5b38;
+    background-color: white;
 }
 
 /* Навигационная панель */
@@ -64,15 +61,20 @@ body {
 .carousel {
     margin-top: 25px;
     max-width: 100%;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 10px;
     border-radius: 20px;
     overflow: hidden;
     height: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.carousel-item img {
+  border-radius: 20px; /* Скругляем края изображения */
 }
 
 .carousel-inner, .carousel-item {
     height: 100%;
+    border-radius: 20px;
 }
 
 .carousel-container {
@@ -111,7 +113,7 @@ body {
     margin-top: 20px;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    background-color: #0bd3e1e0;
+    background-color: white;
 }
 
 .btn-primary {
@@ -146,11 +148,35 @@ figure {
 
 /* Рамка внизу */
 hr.only-one {
-    border-color: #ffffff84 !important;
+    margin-left: 15%; /* Задаем отступ слева */
+    margin-right: 15%; /* Задаем отступ справа */
+    border-color: #ebebeb !important;
     border-width: 3px !important;
     opacity: 0.75 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .border-primary {
     margin: 50px;
+}
+
+
+.row {
+  margin-bottom: 20px; /* Отступ между строками */
+}
+
+
+
+.container {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333; /* цвет текста */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* тень текста */
 }

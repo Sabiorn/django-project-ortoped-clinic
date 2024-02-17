@@ -80,6 +80,7 @@
   </div>
 </div>
 
+
 <hr class="border border-primary only-one">
 
 <div class="container">
@@ -88,10 +89,39 @@
       <p>В удобное для вас время, вы можете посетить врачей разных специальностей, получить квалифицированные медицинские услуги и посетить оздоровительно-тренажерный зал.</p>
     </blockquote>
     <figcaption class="blockquote-footer">
-      Малик Мс <cite title="Source Title">Source Title</cite>
+      команда <cite title="Source Title">Медицинского центра</cite>
     </figcaption>
   </figure>
 </div>
+
+<hr class="border border-primary only-one">
+
+<div class="container">
+  <h1 class="title">Мы предлагаем нашим клиентам</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    {% for service in services %}
+    <div class="col-lg-4 col-md-6 p-4">
+      <div class="card border-primary rounded custom-shadow">
+          <div class="card-body">
+              {% comment %} <a href="{% url "catalog:product" service.pk %}"> {% endcomment %}
+                  <p class="card-title">
+                      {{ service.name }}
+                  </p>
+              </a>
+              <p class="card-text">
+                  {{ service.price }} $
+              </p>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
 
 
 {% endblock content %}
