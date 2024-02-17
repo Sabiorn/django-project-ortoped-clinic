@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from main.models import Service
 
 # def index(request):
 #     context = {
@@ -10,7 +9,7 @@ from main.models import Service
 def index(request):
     context = {
         'title': 'Медицинский Центр неврологии и ортопедии',
-        'services': Service.objects.all()  # Получаем все объекты модели Service
+        # 'services': Service.objects.all()  # Получаем все объекты модели Service
     }
     return render(request, 'main/index.html', context)
 

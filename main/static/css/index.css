@@ -127,7 +127,7 @@ body {
 }
 
 /* Подвал */
-.footer-custom {
+/* .footer-custom {
     background-color: hsla(0, 0%, 95%, 0.8) !important;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -135,7 +135,7 @@ body {
 
 .footer-custom p {
     color: hsl(0, 0%, 0%) !important;
-}
+} */
 
 /* Фигуры и блоки */
 figure {
@@ -179,4 +179,11 @@ hr.only-one {
   font-weight: bold;
   color: #333; /* цвет текста */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* тень текста */
+}
+
+.custom {
+    background-color: white; /* Цвет фона карточек */
+    margin-bottom: 5px; /* Отступ между карточками */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    
 }

@@ -1,0 +1,242 @@
+[
+    {
+        "model": "goods.service",
+        "pk": 1,
+        "fields": {
+            "name": "Консультация врача специалиста",
+            "price": 2000
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 2,
+        "fields": {
+            "name": "Консультация врача специалиста (повторная)",
+            "price": 1500
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 3,
+        "fields": {
+            "name": "Консультация врача хирурга, доктора мед наук, врач УЗИ",
+            "price": 2500
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 4,
+        "fields": {
+            "name": "Вызов врача специалиста на дом",
+            "price": 3000
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 5,
+        "fields": {
+            "name": "Выдача повторных заключений",
+            "price": 500
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 6,
+        "fields": {
+            "name": "Повторная выдача рецепта(взамен испорченного/утеренного)",
+            "price": 500
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 7,
+        "fields": {
+            "name": "Иглорефлексотерапия",
+            "price": 1000
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 8,
+        "fields": {
+            "name": "Выполнение маневра Эпли",
+            "price": 800
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 9,
+        "fields": {
+            "name": "Тейпирование",
+            "price": 600
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 10,
+        "fields": {
+            "name": "ЭКГ( электрокардиограмма)",
+            "price": 700
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 11,
+        "fields": {
+            "name": "ЭЭГ( электроэнцефалография )",
+            "price": 1500
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 12,
+        "fields": {
+            "name": "РЭГ( реоэнцефалография )",
+            "price": 1300
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 13,
+        "fields": {
+            "name": "Анализ крови на уровень глюкозы",
+            "price": 200
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 14,
+        "fields": {
+            "name": "Изготовление индивидуальных стелек Fiziostep размер №1",
+            "price": 4600
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 15,
+        "fields": {
+            "name": "Изготовление индивидуальных стелек Fiziostep взрослая размер №2",
+            "price": 5800
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 16,
+        "fields": {
+            "name": "Изготовление индивидуальных стелек Fiziostep взрослая размер №3",
+            "price": 6300
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 17,
+        "fields": {
+            "name": "Курс закиси азота №10",
+            "price": 6000
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 18,
+        "fields": {
+            "name": "Остеоколл или Плексатрон 1 зона",
+            "price": 700
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 19,
+        "fields": {
+            "name": "Ренген обследование",
+            "price": 1200
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 20,
+        "fields": {
+            "name": "Сферогель медиум введение в МПДС позвоночного столба",
+            "price": 10500
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 21,
+        "fields": {
+            "name": "Блокада ПДС с использованием ультразвуковой навигации",
+            "price": 4000
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 22,
+        "fields": {
+            "name": "Магнитоакустическая терапия 1 процедура",
+            "price": 400
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 23,
+        "fields": {
+            "name": "Перевязка 1-й сложности(малая перевязка)",
+            "price": 900
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 24,
+        "fields": {
+            "name": "Перевязка 2-й сложности(большая перевязка)",
+            "price": 1500
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 25,
+        "fields": {
+            "name": "Снятие швов",
+            "price": 800
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 26,
+        "fields": {
+            "name": "Инъекция внутримышечная",
+            "price": 300
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 27,
+        "fields": {
+            "name": "Внутривенная инфузия капельная 800",
+            "price": 800
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 28,
+        "fields": {
+            "name": "Внутривенная инфузия струйная",
+            "price": 600
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 29,
+        "fields": {
+            "name": "Озонотерапия внутривенная",
+            "price": 900
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 30,
+        "fields": {
+            "name": "Ингаляция воздушно-кислородной смесью",
+            "price": 200
+        }
+    }
+]
