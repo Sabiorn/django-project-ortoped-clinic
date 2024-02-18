@@ -1,4 +1,4 @@
-{% extends "main/base.html" %}
+{% comment %} {% extends "main/base.html" %}
 {% load static %}
 
 {% block content %}
@@ -21,7 +21,7 @@
       <a href="{% url 'catalog:all_services' %}" class="btn btn-primary">Все услуги</a>
     </div>
   </div>
-{% endblock content %}
+{% endblock content %} {% endcomment %}
     <div class="row">
       {% for service in services %}
         {% if forloop.counter <= 3 %}
