@@ -19,8 +19,6 @@ class Service(models.Model):
     price = models.PositiveIntegerField(default=0, verbose_name='Цена, руб.')
     category = models.ForeignKey(to=Categories, on_delete=models.CASCADE, verbose_name='Категория', null=True)
 
-    # image = models.ImageField(upload_to='service_images/')
-    # Другие поля, такие как описание, цена, изображение и т. д., могут быть добавлены по необходимости
     class Meta:
         db_table = 'Service'
         verbose_name = 'Сервис'
@@ -32,6 +30,7 @@ class Service(models.Model):
 
 class Staff(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Имя')
+    job = models.CharField(max_length=150, blank=True, verbose_name='Специальность')
     description = models.TextField(verbose_name='Описание')
     image = models.ImageField(upload_to='staff_images', verbose_name='Изображение')
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')

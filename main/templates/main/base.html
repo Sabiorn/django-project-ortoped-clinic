@@ -32,13 +32,11 @@
                         Консультации специалистов
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkServices">
-                            <li><a class="dropdown-item" href="#">Невролог</a></li>
-                            <li><a class="dropdown-item" href="#">Кардиолог</a></li>
-                            <li><a class="dropdown-item" href="#">Терапевт</a></li>
-                            <li><a class="dropdown-item" href="#">Хирург</a></li>
-                            <li><a class="dropdown-item" href="#">Онколог</a></li>
-                            <li><a class="dropdown-item" href="#">Психолог</a></li>
-                        </ul>
+                            {% tag_staff as staff_list %}
+                            {% for i in staff_list %}
+                                <li><a class="dropdown-item text-dark" href="{% url 'goods:service' i.slug %}">{{ i.job }}</a></li>
+                            {% endfor %}
+                        </ul>   
                     </div>
                     <!-- Профили лечения -->
                     <div class="dropdown">
@@ -58,7 +56,7 @@
                             Еще
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkMore">
-                            <li><a class="dropdown-item" href="{% url "goods:service" %}">Наши специалисты</a></li>
+                            <li><a class="dropdown-item" href="{% url "goods:index" %}">Наши специалисты</a></li>
                             <li><a class="dropdown-item" href="#">Уголок потребителя</a></li>
                             <li><a class="dropdown-item" href="#">Элемент 3</a></li>
                         </ul>

@@ -1,10 +1,27 @@
 {% extends "main/base.html" %}
 {% load static %}
-
-
-
 {% block content %}
-<div class="card-body custom">
+<strong>Z</strong>
+<div class="container">
+  <div class="row">
+      {% for employee in staff %}
+          <div class="col-lg-4">
+              <div class="card">
+                  <img src="{{ employee.image.url }}" class="card-img-top" alt="{{ employee.name }}">
+                  <div class="card-body">
+                      <h5 class="card-title">{{ employee.name }}</h5>
+                      <p class="card-text">{{ employee.description }}</p>
+                      <a href="{% url 'staff_detail' slug=employee.slug %}" class="btn btn-primary">Подробнее</a>
+                  </div>
+              </div>
+          </div>
+      {% endfor %}
+  </div>
+</div>
+
+
+
+{% comment %} <div class="card-body custom">
   <img src="{{ staff.3.image.url }}" alt="..." class="img-fluid" width="300" height="200">
   <p class="card-title">{{ staff.3.name }}</p>
   <p class="card-text">{{ staff.3.description }}</p>
@@ -25,5 +42,5 @@
           {% endif %}
       {% endfor %}
   </div>
-</div> 
+</div> {% endcomment %}
 {% endblock content %}

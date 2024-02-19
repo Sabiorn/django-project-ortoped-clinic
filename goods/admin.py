@@ -7,9 +7,6 @@ class CategoriesAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     list_display = ['name']
 
-from django.contrib import admin
-from .models import Service
-
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ['name', 'price', 'category']
     search_fields = ['name']
@@ -32,13 +29,14 @@ admin.site.register(Service, ServiceAdmin)
 @admin.register(Staff)
 class StaffAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
-    list_display = ['name', 'slug']  # Добавляем 'slug' в список отображаемых полей
+    list_display = ['name', 'slug', 'description', 'job']  # Добавляем 'slug' в список отображаемых полей
     search_fields = ['name']
     fields = [
         'name',
         'description',
         'image',
-        'slug',  # Включаем поле 'slug' в административный интерфейс
+        'job',  # Включаем поле 'slug' в административный интерфейс
+        'slug',
     ]
     class Meta:
         db_table = 'Staff'
