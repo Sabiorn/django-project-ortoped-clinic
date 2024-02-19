@@ -1,4 +1,5 @@
 {% load static %}
+{% load goods_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +17,12 @@
         <nav class="navbar navbar-dark bg-dark navbar-custom fixed-top" style="z-index: 1000;">
             <div class="container-fluid">
                 <!-- Логотип -->
-                <a class="navbar-brand" href="/">
-                    <img src="{% static 'images/mal.png' %}" alt="Logo">
-                </a>
                 <div class="d-flex justify-content-end align-items-center flex-grow-1">
-                    <p class="navbar-text mr-3">Медицинский центр неврологии и ортопедии</p>
+                    <a class="navbar-brand mr-auto" href="/">
+                        <img src="{% static 'images/mal.png' %}" alt="Logo">
+                    </a>
+                    <a href="/" class="navbar-text mr-3" style="text-decoration: none;">Медицинский центр неврологии и ортопедии</a>
+                </div>                               
                 <!-- Ссылки -->
                 <div class="d-flex justify-content-center align-items-center flex-grow-1">
                     <a class="nav-link mx-3" href="/">Главная</a>
@@ -44,12 +46,10 @@
                         Наши услуги
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkTreatment">
-                            <li><a class="dropdown-item" href="#">Лабораторная диагностика (CL LAB)</a></li>
-                            <li><a class="dropdown-item" href="#">Рентгенологическое исследование</a></li>
-                            <li><a class="dropdown-item" href="#">Локальная инъекционная терапия (ЛИТ)</a></li>
-                            <li><a class="dropdown-item" href="#">Инъекционная терапия</a></li>
-                            <li><a class="dropdown-item" href="#">Немедикаментозное лечение</a></li>
-                            <li><a class="dropdown-item" href="#">Функциональная диагностика</a></li>
+                            {% tag_categories as categories %}
+                            {% for category in categories %}
+                                <li><a class="dropdown-item text-dark" href="{% url 'goods:catalog' category.slug %}">{{ category.name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <!-- Еще -->

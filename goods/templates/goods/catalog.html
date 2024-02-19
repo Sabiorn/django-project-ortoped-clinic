@@ -1,20 +1,45 @@
 {% extends "main/base.html" %}
 {% load static %}
+
+
+
+
 {% block content %}
+<div class="container">
+    <h1 class="title">Мы предлагаем нашим клиентам</h1>
+  </div>
     <div class="container">
         <div class="row">
-            {% for service in services %}
-            {% comment %} {% if forloop.counter <= 6 %} {% endcomment %}
-                <div class="col-lg-4 col-md-6 p-4">
-                <div class="card border-primary rounded custom-shadow">
-                    <div class="card-body custom">
-                    <p class="card-title">{{ service.name }}</p>
-                    <p class="card-text">{{ service.price }}руб</p>
+            <!-- Левая колонка для категорий -->
+            <div class="col-lg-3">
+                <div class="list-group">
+                    {% for category in categories %}
+                        <!-- Ссылки на категории -->
+                        <a href="{% url 'goods:catalog' category.slug %}" class="list-group-item list-group-item-action">{{ category.name }}</a>
+                    {% endfor %}
+                    <!-- Кнопка для показа всех услуг -->
+                    <div class="text-right mt-3">
+                        <a href="{% url 'goods:catalog' 'all' %}" class="btn btn-primary">Показать все услуги</a>
                     </div>
                 </div>
+            </div>
+            <!-- Правая колонка для отображения услуг -->
+            <div class="col-lg-9">
+                <div class="row">
+                    {% for service in services %}
+                        <div class="col-lg-4 col-md-6 p-4">
+                            <div class="card border-primary rounded custom-shadow">
+                                <div class="card-body custom">
+                                    <!-- Название услуги -->
+                                    <p class="card-title">{{ service.name }}</p>
+                                    <!-- Цена услуги -->
+                                    <p class="card-text">{{ service.price }}руб</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
-            {% comment %} {% endif %} {% endcomment %}
-            {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock content %}
