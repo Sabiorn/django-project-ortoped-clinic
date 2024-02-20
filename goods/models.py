@@ -33,7 +33,6 @@ class Staff(models.Model):
     job = models.CharField(max_length=150, blank=True, verbose_name='Специальность')
     description = models.TextField(verbose_name='Описание')
     image = models.ImageField(upload_to='staff_images', verbose_name='Изображение')
-    slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
     
     class Meta:
         db_table = 'Staff'

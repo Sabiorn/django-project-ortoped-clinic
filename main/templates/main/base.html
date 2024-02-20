@@ -31,12 +31,12 @@
                         <a class="nav-link mx-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLinkServices" data-bs-toggle="dropdown" aria-expanded="false">
                         Консультации специалистов
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkServices">
+                        {% comment %} <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkServices">
                             {% tag_staff as staff_list %}
                             {% for i in staff_list %}
                                 <li><a class="dropdown-item text-dark" href="{% url 'goods:service' i.slug %}">{{ i.job }}</a></li>
                             {% endfor %}
-                        </ul>   
+                        </ul>    {% endcomment %}
                     </div>
                     <!-- Профили лечения -->
                     <div class="dropdown">

@@ -28,15 +28,13 @@ admin.site.register(Service, ServiceAdmin)
 
 @admin.register(Staff)
 class StaffAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('name',)}
-    list_display = ['name', 'slug', 'description', 'job']  # Добавляем 'slug' в список отображаемых полей
+    list_display = ['name', 'description', 'job']  # Добавляем 'slug' в список отображаемых полей
     search_fields = ['name']
     fields = [
         'name',
         'description',
         'image',
         'job',  # Включаем поле 'slug' в административный интерфейс
-        'slug',
     ]
     class Meta:
         db_table = 'Staff'

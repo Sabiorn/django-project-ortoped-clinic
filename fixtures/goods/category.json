@@ -1,0 +1,50 @@
+[
+    {
+        "model": "goods.categories",
+        "pk": 4,
+        "fields": {
+            "name": "Процедурный кабинет",
+            "slug": "procedurnyj-kabinet"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 7,
+        "fields": {
+            "name": "Адаптивная физкультура",
+            "slug": "adaptivnaya-fizkultura"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 8,
+        "fields": {
+            "name": "Консультации специалистов",
+            "slug": "konsultacii-specialistov"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 9,
+        "fields": {
+            "name": "Физиотерапия",
+            "slug": "fizioterapiya"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 10,
+        "fields": {
+            "name": "Остеопатия",
+            "slug": "osteopatiya"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 11,
+        "fields": {
+            "name": "Диагностика",
+            "slug": "diagnostika"
+        }
+    }
+]
