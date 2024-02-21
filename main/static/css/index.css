@@ -16,21 +16,10 @@ body {
 }
 
 /* Цвета для карточек */
-.bg-blue {
+.bg-white {
     background-color: white;
 }
 
-.bg-green {
-    background-color: white;
-}
-
-.bg-yellow {
-    background-color: white;
-}
-
-.bg-purple {
-    background-color: white;
-}
 
 /* Навигационная панель */
 .navbar {

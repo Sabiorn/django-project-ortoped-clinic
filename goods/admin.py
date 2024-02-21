@@ -5,7 +5,7 @@ from goods.models import Service
 @admin.register(Categories)
 class CategoriesAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
-    list_display = ['name']
+    list_display = ['name', 'description']
 
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ['name', 'price', 'category']
@@ -28,13 +28,14 @@ admin.site.register(Service, ServiceAdmin)
 
 @admin.register(Staff)
 class StaffAdmin(admin.ModelAdmin):
-    list_display = ['name', 'description', 'job']  # Добавляем 'slug' в список отображаемых полей
-    search_fields = ['name']
+    list_display = ['name', 'description', 'job', 'category']  # Добавляем 'slug' в список отображаемых полей
+    search_fields = ['name', 'category']
     fields = [
         'name',
         'description',
         'image',
-        'job',  # Включаем поле 'slug' в административный интерфейс
+        'job',
+        'category'  # Включаем поле 'slug' в административный интерфейс
     ]
     class Meta:
         db_table = 'Staff'

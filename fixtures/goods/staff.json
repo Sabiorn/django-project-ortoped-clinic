@@ -7,7 +7,7 @@
             "job": "Врач остеопат",
             "description": "Врач-остеопат, кандидат медицинских наук",
             "image": "staff_images/gorevanov.jpg",
-            "slug": "gorevanov-eduard-aleksandrovich"
+            "category": 20
         }
     },
     {
@@ -18,7 +18,7 @@
             "job": "Врач ультразвуковой диагностики",
             "description": "Врач ультразвуковой диагностики высшей категории .",
             "image": "staff_images/chel4.jpg",
-            "slug": "tarantina-olga-nikolaevna"
+            "category": 11
         }
     },
     {
@@ -29,7 +29,7 @@
             "job": "Врач хирург",
             "description": "Врач хирург, доктор медицинских наук",
             "image": "staff_images/chel.jpg",
-            "slug": "razmahnin-evgenij-vladimirovich"
+            "category": 19
         }
     },
     {
@@ -40,7 +40,7 @@
             "job": "Врач невролог",
             "description": "Врач-невролог высшей категории,\r\nврач функциональной диагностики, \r\nрефлексотерапевт",
             "image": "staff_images/Малик_Ксения_Валерьевна.JPG",
-            "slug": "malik-kseniya-valerevna"
+            "category": 14
         }
     },
     {
@@ -51,7 +51,7 @@
             "job": "",
             "description": "Медицинская сестра",
             "image": "staff_images/medsestra.jpg",
-            "slug": "yaickaya-olga-andreevna"
+            "category": 4
         }
     },
     {
@@ -62,7 +62,7 @@
             "job": "Врач кардиолог",
             "description": "Врач-кардиолог",
             "image": "staff_images/chel2.jpg",
-            "slug": "shvyleva-ekaterina-vyacheslavovna"
+            "category": 16
         }
     },
     {
@@ -73,7 +73,7 @@
             "job": "Врач ультразвуковой диагностики",
             "description": "Врач ультразвуковой диагностики",
             "image": "staff_images/chel3.jpg",
-            "slug": "shvylev-anton-sergeevich"
+            "category": 11
         }
     },
     {
@@ -84,7 +84,7 @@
             "job": "",
             "description": "Старший специалист по адаптивной физкультуре",
             "image": "staff_images/alex.jpg",
-            "slug": "stepko-aleksandr-vasilevich"
+            "category": 7
         }
     },
     {
@@ -95,7 +95,7 @@
             "job": "Врач терапевт",
             "description": "Врач терапевт-гастроэнтеролог",
             "image": "staff_images/gastro.jpg",
-            "slug": "gordejko-tatyana-aleksandrovna"
+            "category": 17
         }
     },
     {
@@ -106,7 +106,7 @@
             "job": "Психолог",
             "description": "Психолог",
             "image": "staff_images/psiholog2.jpg",
-            "slug": "plotnikova-irina-nikolaevna"
+            "category": 15
         }
     },
     {
@@ -117,7 +117,7 @@
             "job": "Психолог",
             "description": "Психолог",
             "image": "staff_images/psiholog1.jpg",
-            "slug": "saava-larisa-leonidovna"
+            "category": 15
         }
     }
 ]

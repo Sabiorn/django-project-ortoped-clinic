@@ -31,12 +31,15 @@
                         <a class="nav-link mx-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLinkServices" data-bs-toggle="dropdown" aria-expanded="false">
                         Консультации специалистов
                         </a>
-                        {% comment %} <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkServices">
-                            {% tag_staff as staff_list %}
-                            {% for i in staff_list %}
-                                <li><a class="dropdown-item text-dark" href="{% url 'goods:service' i.slug %}">{{ i.job }}</a></li>
-                            {% endfor %}
-                        </ul>    {% endcomment %}
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkServices">
+                            <li><a class="dropdown-item" href="{% url 'goods:catalog' 'psihologiya' %}">Психолог</a></li>
+                            <li><a class="dropdown-item" href="{% url 'goods:catalog' 'kardiologiya' %}">Кардиолог</a></li>
+                            <li><a class="dropdown-item" href="{% url 'goods:catalog' 'gastroenterologiya' %}">Гастроэнтеролог</a></li>
+                            <li><a class="dropdown-item" href="{% url 'goods:catalog' 'nevrologiya' %}">Невролог</a></li>
+                            <li><a class="dropdown-item" href="{% url 'goods:catalog' 'diagnostika' %}">Узи</a></li>
+                            <li><a class="dropdown-item" href="{% url 'goods:catalog' 'hirurgiya' %}">Хирургия</a></li>
+                            <li><a class="dropdown-item" href="{% url 'goods:catalog' 'osteopatiya' %}">Остеопатия</a></li>
+                        </ul>
                     </div>
                     <!-- Профили лечения -->
                     <div class="dropdown">
@@ -44,10 +47,9 @@
                         Наши услуги
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkTreatment">
-                            {% tag_categories as categories %}
-                            {% for category in categories %}
-                                <li><a class="dropdown-item text-dark" href="{% url 'goods:catalog' category.slug %}">{{ category.name }}</a></li>
-                            {% endfor %}
+                            <li><a class="dropdown-item" href="{% url "goods:catalog" "procedurnyj-kabinet" %}">Процедурный кабинет</a></li>
+                            <li><a class="dropdown-item" href="{% url "goods:catalog" "adaptivnaya-fizkultura" %}">Адаптивная физкультура</a></li>
+                            <li><a class="dropdown-item" href="{% url "goods:catalog" "konsultacii-specialistov" %}">Консультации специалистов</a></li>
                         </ul>
                     </div>
                     <!-- Еще -->
@@ -56,12 +58,12 @@
                             Еще
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkMore">
-                            <li><a class="dropdown-item" href="{% url "goods:index" %}">Наши специалисты</a></li>
-                            <li><a class="dropdown-item" href="#">Уголок потребителя</a></li>
-                            <li><a class="dropdown-item" href="#">Элемент 3</a></li>
+                            <li><a class="dropdown-item" href="{% url "main:about" %}">О нас</a></li>
+                            <li><a class="dropdown-item" href="#">Контакты</a></li>
+                            <li><a class="dropdown-item" href="#">Вакансии</a></li>
                         </ul>
                     </div>
-                    <a class="nav-link mx-3" href="{% url "main:about" %}">О нас</a>
+                    <a class="nav-link mx-3" href="{% url "goods:index" %}">Наши специалисты</a>
                 </div>
             </div>
         </nav>

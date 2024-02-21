@@ -1,47 +1,129 @@
 {% extends "main/base.html" %}
 {% load static %}
-
+{% load goods_tags %}
 
 
 
 {% block content %}
+
+{% comment %} {% if request.path == "/catalog/procedurnyj-kabinet/" %}
 <div class="container">
-    <h1 class="title">Мы предлагаем нашим клиентам</h1>
-  </div>
-    <div class="container">
-        <div class="row">
-            <!-- Левая колонка для категорий -->
-            <div class="col-lg-3">
-                <div class="list-group">
-                    {% for category in categories %}
-                        <!-- Ссылки на категории -->
-                        <a href="{% url 'goods:catalog' category.slug %}" class="list-group-item list-group-item-action">{{ category.name }}</a>
-                    {% endfor %}
-                    <!-- Кнопка для показа всех услуг -->
-                    <div class="text-right mt-3">
-                        <a href="{% url 'goods:catalog' 'all' %}" class="btn btn-primary">Показать все услуги</a>
+    <p>Процедурный кабинет нашего медицинского центра предлагает широкий спектр медицинских процедур:</p>
+    <ul>
+        <li>Изготовление индивидуальных стелек Fiziostep: Мы создаем индивидуальные стельки для обеспечения оптимальной поддержки и комфорта вашим стопам.</li>
+        <li>Курс закиси азота №10: Процедура, направленная на улучшение кровообращения и облегчение боли в различных заболеваниях опорно-двигательного аппарата.</li>
+        <li>Перевязка 1-й сложности (малая перевязка): Эффективная обработка и защита ран и повреждений с использованием медицинских материалов.</li>
+        <li>Перевязка 2-й сложности (большая перевязка): Комплексная обработка и лечение травм и хирургических ран с учетом их степени тяжести.</li>
+        <li>Снятие швов: Безболезненное удаление швов после хирургических вмешательств или ран.</li>
+        <li>Инъекция внутримышечная: Введение лекарственных препаратов непосредственно в мышцы для быстрого и эффективного лечения.</li>
+        <li>Внутривенная инфузия капельная 800: Проведение капельной инфузии для поддержания оптимального уровня жидкости и внутривенного введения лекарственных препаратов.</li>
+        <li>Внутривенная инфузия струйная: Быстрое и эффективное введение лекарственных препаратов посредством струйной инфузии.</li>
+        <li>Ингаляция воздушно-кислородной смесью: Процедура для улучшения дыхательной функции и облегчения симптомов заболеваний дыхательной системы.</li>
+    </ul>
+    <p>Наш процедурный кабинет оснащен современным оборудованием и обеспечен высококвалифицированным персоналом, готовым оказать профессиональную помощь в проведении этих и других медицинских процедур.</p>
+</div>
+{% elif request.path == "/catalog/adaptivnaya-fizkultura/" %}
+<div class="container">
+    <p>Лечебно-оздоровительный тренажерный зал предлагает следующие виды лечения:</p>
+    <ul>
+        <li>Восстановление после операции на позвоночнике и суставах;</li>
+        <li>Грыжи и протрузии межпозвоночного диска;</li>
+        <li>Артроз I, II, III стадии;</li>
+        <li>Деформация нижних конечностей, грудной клетки, позвоночника;</li>
+        <li>Плоскостопие, вальгусная деформация стоп;</li>
+        <li>Парезы и параличи конечностей после перенесенных инсультов, травм головного и спинного мозга, заболеваниях центральной и периферической нервной системы, заболеваниях позвоночника.</li>
+    </ul>
+</div>
+
+{% else %}
+    <div>Другой контент</div>
+{% endif %} {% endcomment %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="list-group">
+                {% tag_categories as categories %}
+                {% for category in categories %}
+                    <!-- Ссылки на категории -->
+                    <a href="{% url 'goods:catalog' category.slug %}" class="list-group-item list-group-item-action">{{ category.name }}</a>
+                {% endfor %}
+                <!-- Кнопка для показа всех услуг -->
+                {% comment %} <div class="text-right mt-3">
+                    <a href="{% url 'goods:catalog' 'all' %}" class="btn btn-primary">Показать все услуги</a>
+                </div> {% endcomment %}
+            </div>
+        </div>
+        <div class="col-lg-8 offset-lg-1"> <!-- Смещаем блок на одну колонку вправо -->
+            <div class="card mb-3">
+                <div class="card-body bg-white">
+                    <h1 class="title">{{category_name}}</h1>
+                    <p class="card-text">{{ category_description }}</p> 
+                </div>
+            </div>
+            <div class="col-lg-9"> <!-- Правая колонка для отображения услуг и персонала -->
+                <div class="row">
+                    <div class="col-lg-12"> <!-- Убираем сдвиг -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3>Услуги по направлению</h3>
+                            <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#servicesCollapse" aria-expanded="false" aria-controls="servicesCollapse">
+                                Показать/Скрыть
+                            </button>
+                        </div>
+                        <div class="collapse" id="servicesCollapse"> 
+                            <div class="row">
+                                {% for service in services %}
+                                    <div class="col-lg-4 col-md-6 p-4">
+                                        <div class="card border-primary rounded custom-shadow">
+                                            <div class="card-body custom">
+                                                <!-- Название услуги -->
+                                                <p class="card-title">{{ service.name }}</p>
+                                                <!-- Цена услуги -->
+                                                <p class="card-text">{{ service.price }}руб</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% empty %}         <!-- оптимальный блок если нет в бд -->
+                                <li>Консультация специалиста</li>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Правая колонка для отображения услуг -->
-            <div class="col-lg-9">
+            <div class="container mt-4">
+                <h3>Специалист по направлению</h3>
                 <div class="row">
-                    {% for service in services %}
+                    {% for staff_member in staff %}
                         <div class="col-lg-4 col-md-6 p-4">
                             <div class="card border-primary rounded custom-shadow">
                                 <div class="card-body custom">
-                                    <!-- Название услуги -->
-                                    <p class="card-title">{{ service.name }}</p>
-                                    <!-- Цена услуги -->
-                                    <p class="card-text">{{ service.price }}руб</p>
+                                    <!-- Имя сотрудника -->
+                                    <img src="{{ staff_member.image.url }}" alt="..." class="img-fluid" width="300" height="200">
+                                    <p class="card-title">{{ staff_member.name }}</p>
+                                    <!-- Специальность сотрудника -->
+                                    <p class="card-text">{{ staff_member.job }}</p>
+                                    <!-- Описание сотрудника -->
+                                    <p class="card-text">{{ staff_member.description }}</p>
                                 </div>
                             </div>
                         </div>
+                    {% empty %}         <!-- оптимальный блок если нет в бд -->
+                    <li>Отсутствуют</li>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
+
+
+
+
 {% endblock content %}
 
 
