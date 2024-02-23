@@ -8,20 +8,23 @@
     <!-- Левые контейнеры -->
     <div class="col-lg-2 col-md-12 mt-md-4">
       <div class="card mb-3" style="width: 18rem;">
-          <div class="card-body bg-white">
-              <h5 class="card-title">Невролог</h5>
-              <p class="card-text">Лечение заболевания нервной системы, позвоночника и сосудов головного мозга.</p>
-              <!-- обращение к конкретной категории -->
-              <a class="btn btn-primary" href="{% url 'goods:catalog' 'nevrologiya' %}"> Запись </a>    
-          </div>
-      </div>
+        <div class="card-body bg-white">
+            <h5 class="card-title">Невролог</h5>
+            <p class="card-text">Лечение заболевания нервной системы, позвоночника и сосудов головного мозга.</p>
+            <a class="btn btn-primary" href="{% url 'goods:catalog' 'nevrologiya' %}">
+                <img src="{% static "images/nurse.png" %}" alt="Запись">
+            </a>    
+        </div>
+    </div>    
       <div class="card mb-3" style="width: 18rem;">
-          <div class="card-body bg-white">
-              <h5 class="card-title">Кардиолог</h5>
-              <p class="card-text">Специалист по сердцу: диагностика, лечение, профилактика болезней.</p>
-              <a class="btn btn-primary" href="{% url 'goods:catalog' 'kardiologiya' %}"> Запись </a> 
-          </div>
-      </div>
+        <div class="card-body bg-white">
+            <h5 class="card-title">Кардиолог</h5>
+            <p class="card-text">Специалист по сердцу: диагностика, лечение, профилактика болезней.</p>
+            <a class="btn btn-primary" href="{% url 'goods:catalog' 'kardiologiya' %}">
+                <img src="{% static "images/cardiology.png" %}" alt="Запись">
+            </a> 
+        </div>
+    </div>   
   </div>
   
     
@@ -66,18 +69,22 @@
     <div class="col-lg-2 col-md-12 mt-md-4">
       <div class="card mb-3" style="width: 18rem;">
         <div class="card-body bg-white">
-          <h5 class="card-title">Психолог</h5>
-          <p class="card-text">помощь в решении психологических проблем, поддержка в кризисных ситуациях, развитие личности.</p>
-          <a class="btn btn-primary" href="{% url 'goods:catalog' 'psihologiya' %}"> Запись </a>   
+            <h5 class="card-title">Психолог</h5>
+            <p class="card-text">Поддержка в сложных ситуациях, забота о вашем эмоциональном состоянии.</p>
+            <a class="btn btn-primary" href="{% url 'goods:catalog' 'psihologiya' %}">
+                <img src="{% static "images/doctor.png" %}" alt="Запись">
+            </a>
         </div>
-      </div>
+    </div>
+    
       <div class="card mb-3" style="width: 18rem;">
         <div class="card-body bg-white">
-          <h5 class="card-title">Гастроэнтеролог</h5>
-          <p class="card-text">Специалист по лечению нарушений ЖКТ.</p>
-          <a class="btn btn-primary" href="{% url 'goods:catalog' 'gastroenterologiya' %}"> Запись </a> 
-        </div>
-      </div>
+            <h5 class="card-title">Гастроэнтеролог</h5>
+            <p class="card-text">Диагностика и лечение желудочно-кишечных проблем, забота о вашем здоровье.</p>
+            <a class="btn btn-primary" href="{% url 'goods:catalog' 'gastroenterologiya' %}">
+                <img src="{% static "images/stomach.png" %}" alt="Запись">
+            </a>
+        </div>  
     </div>
     
   </div>

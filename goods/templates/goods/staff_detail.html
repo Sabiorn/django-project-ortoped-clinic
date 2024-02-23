@@ -1,46 +1,31 @@
-{% extends "main/base.html" %}
 {% load static %}
-{% block content %}
-<strong>Z</strong>
-<div class="container">
-  <div class="row">
-      {% for employee in staff %}
-          <div class="col-lg-4">
-              <div class="card">
-                  <img src="{{ employee.image.url }}" class="card-img-top" alt="{{ employee.name }}">
-                  <div class="card-body">
-                      <h5 class="card-title">{{ employee.name }}</h5>
-                      <p class="card-text">{{ employee.description }}</p>
-                      <a href="{% url 'staff_detail' slug=employee.slug %}" class="btn btn-primary">Подробнее</a>
-                  </div>
-              </div>
-          </div>
-      {% endfor %}
-  </div>
-</div>
-
-
-
-{% comment %} <div class="card-body custom">
-  <img src="{{ staff.3.image.url }}" alt="..." class="img-fluid" width="300" height="200">
-  <p class="card-title">{{ staff.3.name }}</p>
-  <p class="card-text">{{ staff.3.description }}</p>
-</div>
-<div class="container">
-  <div class="row">
-      {% for s in staff %}
-          {% if s.id != 4 %}
-              <div class="col-lg-4 col-md-6 p-4">
-                  <div class="card border-primary rounded custom-shadow">
-                      <div class="card-body custom">
-                          <img src="{{ s.image.url }}" alt="..." class="img-fluid" width="300" height="200">
-                          <p class="card-title">{{ s.name }}</p>
-                          <p class="card-text">{{ s.description }}</p>
-                      </div>
-                  </div>
-              </div>
-          {% endif %}
-      {% endfor %}
-  </div>
+{% load goods_tags %}
+{% comment %} <div class="container">
+    <p>Процедурный кабинет нашего медицинского центра предлагает широкий спектр медицинских процедур:</p>
+    <ul>
+        <li>Изготовление индивидуальных стелек Fiziostep: Мы создаем индивидуальные стельки для обеспечения оптимальной поддержки и комфорта вашим стопам.</li>
+        <li>Курс закиси азота №10: Процедура, направленная на улучшение кровообращения и облегчение боли в различных заболеваниях опорно-двигательного аппарата.</li>
+        <li>Перевязка 1-й сложности (малая перевязка): Эффективная обработка и защита ран и повреждений с использованием медицинских материалов.</li>
+        <li>Перевязка 2-й сложности (большая перевязка): Комплексная обработка и лечение травм и хирургических ран с учетом их степени тяжести.</li>
+        <li>Снятие швов: Безболезненное удаление швов после хирургических вмешательств или ран.</li>
+        <li>Инъекция внутримышечная: Введение лекарственных препаратов непосредственно в мышцы для быстрого и эффективного лечения.</li>
+        <li>Внутривенная инфузия капельная 800: Проведение капельной инфузии для поддержания оптимального уровня жидкости и внутривенного введения лекарственных препаратов.</li>
+        <li>Внутривенная инфузия струйная: Быстрое и эффективное введение лекарственных препаратов посредством струйной инфузии.</li>
+        <li>Ингаляция воздушно-кислородной смесью: Процедура для улучшения дыхательной функции и облегчения симптомов заболеваний дыхательной системы.</li>
+    </ul>
+    <p>Наш процедурный кабинет оснащен современным оборудованием и обеспечен высококвалифицированным персоналом, готовым оказать профессиональную помощь в проведении этих и других медицинских процедур.</p>
 </div> {% endcomment %}
-{% endblock content %}
+
+{% tag_service as service %}
+<table class="table table-bordered">
+    <td>{{ service.0.name }}</td>
+    <td>{{ service.0.price }} руб</td>
+</table>
+<table class="table table-bordered">
+    <td>{{ service.1.name }}</td>
+    <td>{{ service.1.price }} руб</td>
+    </table>
+{% comment %} <div class="card-body custom">
+    <p class="card-title">{{ service.3.name }}</p>
+    <p class="card-text">{{ service.3.price }}</p>
+  </div> {% endcomment %}

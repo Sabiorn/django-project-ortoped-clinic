@@ -83,8 +83,8 @@ body {
 /* Текст в карточках */
 .card-text {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     flex-direction: column;
 }
 
@@ -92,8 +92,8 @@ body {
 .card-body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
 }
 
 /* Кнопки */
@@ -176,3 +176,6 @@ hr.only-one {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     
 }
+
+
+

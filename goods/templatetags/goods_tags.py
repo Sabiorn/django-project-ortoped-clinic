@@ -1,5 +1,5 @@
 from django import template
-from goods.models import Categories, Staff
+from goods.models import Categories, Service, Staff
 
 register = template.Library()
 
@@ -11,3 +11,6 @@ def tag_categories():
 def tag_staff():
     return Staff.objects.all()
 
+@register.simple_tag()
+def tag_service():
+    return Service.objects.all()

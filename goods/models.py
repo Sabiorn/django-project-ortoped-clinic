@@ -18,7 +18,7 @@ class Categories(models.Model):
 class Service(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Название')
     price = models.PositiveIntegerField(default=0, verbose_name='Цена, руб.')
-    category = models.ForeignKey(to=Categories, on_delete=models.CASCADE, verbose_name='Категория', null=True)
+    category = models.ForeignKey(to=Categories, on_delete=models.CASCADE, verbose_name='Категория', blank=True, null=True)
 
     class Meta:
         db_table = 'Service'

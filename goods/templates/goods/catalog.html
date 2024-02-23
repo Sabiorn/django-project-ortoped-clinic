@@ -42,78 +42,123 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
-            <div class="list-group">
-                {% tag_categories as categories %}
-                {% for category in categories %}
-                    <!-- Ссылки на категории -->
-                    <a href="{% url 'goods:catalog' category.slug %}" class="list-group-item list-group-item-action">{{ category.name }}</a>
-                {% endfor %}
-                <!-- Кнопка для показа всех услуг -->
-                {% comment %} <div class="text-right mt-3">
-                    <a href="{% url 'goods:catalog' 'all' %}" class="btn btn-primary">Показать все услуги</a>
-                </div> {% endcomment %}
+            <div class="card mb-3 bg-white">
+                <div class="card-body">
+                    <h3 class="price-table table priceTable p">Консультации врачей</h3>
+                    {% tag_categories as categories %}
+                    {% for category in categories %}
+                    {% if category.slug != "procedurnyj-kabinet" and category.slug != "adaptivnaya-fizkultura" %}
+                        <!-- Ссылки на категории -->
+                        <a href="{% url 'goods:catalog' category.slug %}" class="list-group-item price-table table priceTable p">{{ category.name }}</a>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- Кнопка для показа всех услуг -->
+                    {% comment %} <div class="text-right mt-3">
+                        <a href="{% url 'goods:catalog' 'all' %}" class="btn btn-primary">Показать все услуги</a>
+                    </div> {% endcomment %}
+                </div>
             </div>
         </div>
+        
         <div class="col-lg-8 offset-lg-1"> <!-- Смещаем блок на одну колонку вправо -->
             <div class="card mb-3">
                 <div class="card-body bg-white">
                     <h1 class="title">{{category_name}}</h1>
-                    <p class="card-text">{{ category_description }}</p> 
+                    <p class="card-text text-start">{{ category_description }}</p> 
                 </div>
-            </div>
-            <div class="col-lg-9"> <!-- Правая колонка для отображения услуг и персонала -->
                 <div class="row">
-                    <div class="col-lg-12"> <!-- Убираем сдвиг -->
+                    <div class="col-lg-6">
+                        <h3>Услуги</h3>
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h3>Услуги по направлению</h3>
-                            <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#servicesCollapse" aria-expanded="false" aria-controls="servicesCollapse">
-                                Показать/Скрыть
-                            </button>
-                        </div>
-                        <div class="collapse" id="servicesCollapse"> 
+                            <!-- Пустой контейнер для кнопки, оставляем скрытым -->
+                            <div id="emptyButtonContainer" style="display: none;"></div>
+                        </div>                        
+                        <div class="collapse show" id="servicesCollapse">
                             <div class="row">
-                                {% for service in services %}
-                                    <div class="col-lg-4 col-md-6 p-4">
-                                        <div class="card border-primary rounded custom-shadow">
-                                            <div class="card-body custom">
-                                                <!-- Название услуги -->
-                                                <p class="card-title">{{ service.name }}</p>
-                                                <!-- Цена услуги -->
-                                                <p class="card-text">{{ service.price }}руб</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {% empty %}         <!-- оптимальный блок если нет в бд -->
-                                <li>Консультация специалиста</li>
-                                {% endfor %}
+                                <div class="col-lg-12">
+                                    <table class="price-table table priceTable p">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col" class="text-start">Название услуги</th>
+                                                <th scope="col" class="text-start">Цена</th>
+                                            </tr>
+                                            {% if request.path != "/catalog/adaptivnaya-fizkultura/" and request.path != "/catalog/procedurnyj-kabinet/" %}
+                                                {% tag_service as service %}
+                                                <tr>
+                                                    <td class="text-start">{{ service.0.name }}</td>
+                                                    <td class="text-start">{{ service.0.price }} руб</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">{{ service.1.name }}</td>
+                                                    <td class="text-start">{{ service.1.price }} руб</td>
+                                                </tr>
+                                            {% endif %}
+                                            {% for service in services %}
+                                                {% if forloop.counter <= 3 %}
+                                                    <tr>
+                                                        <td class="text-start">{{ service.name }}</td>
+                                                        <td class="text-start">{{ service.price }} руб</td>
+                                                    </tr>
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if services|length > 3 %}
+                                                <tr class="hidden-services">
+                                                    <td colspan="2">
+                                                        <button class="btn btn-link toggle-services" type="button" data-bs-toggle="collapse" data-bs-target="#extraServices" aria-expanded="false" aria-controls="extraServices">
+                                                            Показать все услуги
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="extra-services collapse" id="extraServices">
+                                                    <td colspan="2">
+                                                        <table class="price-table table priceTable p">
+                                                            <tbody>
+                                                                {% for service in services %}
+                                                                    {% if forloop.counter > 3 %}
+                                                                        <tr>
+                                                                            <td class="text-start">{{ service.name }}</td>
+                                                                            <td class="text-start">{{ service.price }} руб</td>
+                                                                        </tr>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            {% endif %}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <h3>Специалист по направлению</h3>
+                        <div class="row">
+                            {% for staff_member in staff %}
+                            <div class="col-lg-12">
+                                <div class="card border-primary rounded custom-shadow">
+                                    <div class="card-body custom">
+                                        <!-- Имя сотрудника -->
+                                        <img src="{{ staff_member.image.url }}" alt="..." class="img-fluid" width="300" height="200">
+                                        <p class="card-title">{{ staff_member.name }}</p>
+                                        <!-- Специальность сотрудника -->
+                                        {% comment %} <p class="card-text">{{ staff_member.job }}</p> {% endcomment %}
+                                        <!-- Описание сотрудника -->
+                                        <p class="card-text">{{ staff_member.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% empty %}
+                            <li>Отсутствуют</li>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container mt-4">
-                <h3>Специалист по направлению</h3>
-                <div class="row">
-                    {% for staff_member in staff %}
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <div class="card-body custom">
-                                    <!-- Имя сотрудника -->
-                                    <img src="{{ staff_member.image.url }}" alt="..." class="img-fluid" width="300" height="200">
-                                    <p class="card-title">{{ staff_member.name }}</p>
-                                    <!-- Специальность сотрудника -->
-                                    <p class="card-text">{{ staff_member.job }}</p>
-                                    <!-- Описание сотрудника -->
-                                    <p class="card-text">{{ staff_member.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    {% empty %}         <!-- оптимальный блок если нет в бд -->
-                    <li>Отсутствуют</li>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+        </div>        
     </div>
 </div>
 
