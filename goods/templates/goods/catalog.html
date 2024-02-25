@@ -6,42 +6,20 @@
 
 {% block content %}
 
-{% comment %} {% if request.path == "/catalog/procedurnyj-kabinet/" %}
-<div class="container">
-    <p>Процедурный кабинет нашего медицинского центра предлагает широкий спектр медицинских процедур:</p>
-    <ul>
-        <li>Изготовление индивидуальных стелек Fiziostep: Мы создаем индивидуальные стельки для обеспечения оптимальной поддержки и комфорта вашим стопам.</li>
-        <li>Курс закиси азота №10: Процедура, направленная на улучшение кровообращения и облегчение боли в различных заболеваниях опорно-двигательного аппарата.</li>
-        <li>Перевязка 1-й сложности (малая перевязка): Эффективная обработка и защита ран и повреждений с использованием медицинских материалов.</li>
-        <li>Перевязка 2-й сложности (большая перевязка): Комплексная обработка и лечение травм и хирургических ран с учетом их степени тяжести.</li>
-        <li>Снятие швов: Безболезненное удаление швов после хирургических вмешательств или ран.</li>
-        <li>Инъекция внутримышечная: Введение лекарственных препаратов непосредственно в мышцы для быстрого и эффективного лечения.</li>
-        <li>Внутривенная инфузия капельная 800: Проведение капельной инфузии для поддержания оптимального уровня жидкости и внутривенного введения лекарственных препаратов.</li>
-        <li>Внутривенная инфузия струйная: Быстрое и эффективное введение лекарственных препаратов посредством струйной инфузии.</li>
-        <li>Ингаляция воздушно-кислородной смесью: Процедура для улучшения дыхательной функции и облегчения симптомов заболеваний дыхательной системы.</li>
-    </ul>
-    <p>Наш процедурный кабинет оснащен современным оборудованием и обеспечен высококвалифицированным персоналом, готовым оказать профессиональную помощь в проведении этих и других медицинских процедур.</p>
-</div>
-{% elif request.path == "/catalog/adaptivnaya-fizkultura/" %}
-<div class="container">
-    <p>Лечебно-оздоровительный тренажерный зал предлагает следующие виды лечения:</p>
-    <ul>
-        <li>Восстановление после операции на позвоночнике и суставах;</li>
-        <li>Грыжи и протрузии межпозвоночного диска;</li>
-        <li>Артроз I, II, III стадии;</li>
-        <li>Деформация нижних конечностей, грудной клетки, позвоночника;</li>
-        <li>Плоскостопие, вальгусная деформация стоп;</li>
-        <li>Парезы и параличи конечностей после перенесенных инсультов, травм головного и спинного мозга, заболеваниях центральной и периферической нервной системы, заболеваниях позвоночника.</li>
-    </ul>
-</div>
-
-{% else %}
-    <div>Другой контент</div>
-{% endif %} {% endcomment %}
-
 <div class="container">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-12">
+            <div class="card mb-3 bg-white">
+                <div class="card-body">
+                    <h1 class="title">{{ category_name }}</h1>
+                    <p class="card-text text-start">{{ category_description }}</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Категории -->
+        <div class="col-lg-3" id="scrollingMenu">
             <div class="card mb-3 bg-white">
                 <div class="card-body">
                     <h3 class="price-table table priceTable p">Консультации врачей</h3>
@@ -52,122 +30,128 @@
                         <a href="{% url 'goods:catalog' category.slug %}" class="list-group-item price-table table priceTable p">{{ category.name }}</a>
                     {% endif %}
                     {% endfor %}
-                    <!-- Кнопка для показа всех услуг -->
-                    {% comment %} <div class="text-right mt-3">
-                        <a href="{% url 'goods:catalog' 'all' %}" class="btn btn-primary">Показать все услуги</a>
-                    </div> {% endcomment %}
                 </div>
             </div>
         </div>
-        
-        <div class="col-lg-8 offset-lg-1"> <!-- Смещаем блок на одну колонку вправо -->
-            <div class="card mb-3">
-                <div class="card-body bg-white">
-                    <h1 class="title">{{category_name}}</h1>
-                    <p class="card-text text-start">{{ category_description }}</p> 
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h3>Услуги</h3>
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <!-- Пустой контейнер для кнопки, оставляем скрытым -->
-                            <div id="emptyButtonContainer" style="display: none;"></div>
-                        </div>                        
-                        <div class="collapse show" id="servicesCollapse">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <table class="price-table table priceTable p">
-                                        <tbody>
-                                            <tr>
-                                                <th scope="col" class="text-start">Название услуги</th>
-                                                <th scope="col" class="text-start">Цена</th>
-                                            </tr>
-                                            {% if request.path != "/catalog/adaptivnaya-fizkultura/" and request.path != "/catalog/procedurnyj-kabinet/" %}
-                                                {% tag_service as service %}
-                                                <tr>
-                                                    <td class="text-start">{{ service.0.name }}</td>
-                                                    <td class="text-start">{{ service.0.price }} руб</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">{{ service.1.name }}</td>
-                                                    <td class="text-start">{{ service.1.price }} руб</td>
-                                                </tr>
-                                            {% endif %}
-                                            {% for service in services %}
-                                                {% if forloop.counter <= 3 %}
+        <!-- Блок с staff_detail -->
+        <div class="card mb-3 bg-white">
+            {% include "goods/staff_detail.html" %}
+        </div>
+        <div class="row">
+            <!-- Блок с услугами -->
+            <div class="col-lg-4"> 
+                <div class="card mb-3">
+                    <div class="card-body bg-white">
+                        <div class="mb-5">
+                            <h3>Услуги</h3>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <!-- Пустой контейнер для кнопки, оставляем скрытым -->
+                                <div id="emptyButtonContainer" style="display: none;"></div>
+                            </div>                        
+                            <div class="collapse show" id="servicesCollapse">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="d-flex flex-column">
+                                            <table class="price-table table priceTable p">
+                                                <thead>
                                                     <tr>
-                                                        <td class="text-start">{{ service.name }}</td>
-                                                        <td class="text-start">{{ service.price }} руб</td>
+                                                        <th scope="col" class="text-start">Название услуги</th>
+                                                        <th scope="col" class="text-start">Цена</th>
                                                     </tr>
-                                                {% endif %}
-                                            {% endfor %}
-                                            {% if services|length > 3 %}
-                                                <tr class="hidden-services">
-                                                    <td colspan="2">
-                                                        <button class="btn btn-link toggle-services" type="button" data-bs-toggle="collapse" data-bs-target="#extraServices" aria-expanded="false" aria-controls="extraServices">
-                                                            Показать все услуги
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr class="extra-services collapse" id="extraServices">
-                                                    <td colspan="2">
-                                                        <table class="price-table table priceTable p">
-                                                            <tbody>
-                                                                {% for service in services %}
-                                                                    {% if forloop.counter > 3 %}
-                                                                        <tr>
-                                                                            <td class="text-start">{{ service.name }}</td>
-                                                                            <td class="text-start">{{ service.price }} руб</td>
-                                                                        </tr>
-                                                                    {% endif %}
-                                                                {% endfor %}
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% if request.path != "/catalog/adaptivnaya-fizkultura/" and request.path != "/catalog/procedurnyj-kabinet/" %}
+                                                        {% tag_service as service %}
+                                                        <tr>
+                                                            <td class="text-start">{{ service.0.name }}</td>
+                                                            <td class="text-start">{{ service.0.price }} руб</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-start">{{ service.1.name }}</td>
+                                                            <td class="text-start">{{ service.1.price }} руб</td>
+                                                        </tr>
+                                                    {% endif %}
+                                                    {% for service in services %}
+                                                        {% if forloop.counter <= 1 %}
+                                                            <tr>
+                                                                <td class="text-start">{{ service.name }}</td>
+                                                                <td class="text-start">{{ service.price }} руб</td>
+                                                            </tr>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                            {% if services|length > 1 %}
+                                                <div class="extra-services collapse" id="extraServices">
+                                                    <table class="price-table table priceTable p">
+                                                        <tbody>
+                                                            {% for service in services %}
+                                                                {% if forloop.counter > 1 %}
+                                                                    <tr>
+                                                                        <td class="text-start">{{ service.name }}</td>
+                                                                        <td class="text-start">{{ service.price }} руб</td>
+                                                                    </tr>
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <button class="btn btn-link toggle-services" type="button" data-bs-toggle="collapse" data-bs-target="#extraServices" aria-expanded="false" aria-controls="extraServices">
+                                                    <img src="{% static "images/updown.png" %}" alt="Показать все услуги">
+                                                </button>
                                             {% endif %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="col-lg-6">
-                        <h3>Специалист по направлению</h3>
-                        <div class="row">
-                            {% for staff_member in staff %}
-                            <div class="col-lg-12">
-                                <div class="card border-primary rounded custom-shadow">
-                                    <div class="card-body custom">
-                                        <!-- Имя сотрудника -->
-                                        <img src="{{ staff_member.image.url }}" alt="..." class="img-fluid" width="300" height="200">
-                                        <p class="card-title">{{ staff_member.name }}</p>
-                                        <!-- Специальность сотрудника -->
-                                        {% comment %} <p class="card-text">{{ staff_member.job }}</p> {% endcomment %}
-                                        <!-- Описание сотрудника -->
-                                        <p class="card-text">{{ staff_member.description }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            {% empty %}
-                            <li>Отсутствуют</li>
-                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+        
+            <!-- Блок с каруселью специалистов -->
+            <div class="col-lg-8"> 
+                <div class="card mb-3">
+                    <div class="card-body bg-white">
+                        <div>
+                            <h3>Специалисты</h3>
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    {% for staff_member in staff %}
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></button>
+                                    {% endfor %}
+                                </div>
+                                <div class="carousel-inner">
+                                    {% for staff_member in staff %}
+                                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                            <img src="{{ staff_member.image.url }}" class="d-block w-100" alt="..." style="max-width: 50%; height: auto;">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{ staff_member.name }}</h5>
+                                                <p>{{ staff_member.description }}</p>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>        
+            
+        </div>
+        
+               
     </div>
 </div>
-
-
-
-
-
-
-
 
 {% endblock content %}
 

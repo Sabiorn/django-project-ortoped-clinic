@@ -178,4 +178,48 @@ hr.only-one {
 }
 
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-image: none;
+}
 
+.carousel-control-prev-icon::before, .carousel-control-next-icon::before {
+    display: none;
+}
+
+
+/* styles.css */
+.price-table td {
+    width: 50%;
+}
+
+#scrollingMenu {
+    position: fixed;
+    top: 50%; /* Начальное положение в середине экрана */
+    transform: translateY(-50%);
+    width: 22%; /* Ширина контейнера */
+    max-width: 250px; /* Максимальная ширина контейнера */
+    left: 20px; /* Отступ от левого края экрана */
+    overflow-y: auto; /* Добавление прокрутки, если высота блока превышает высоту экрана */
+}
+
+
+
+/* Стили для staff_detail */
+
+  .container.staff_css h3 {
+    color: #333333a1;
+    text-align: left;
+  }
+  
+  .container.staff_css p {
+    color: #0b0f7e;
+    text-align: left;
+  }
+  
+  .container.staff_css ul {
+    list-style-type: square;
+    padding-left: 20px;
+    text-align: left;
+    color: #333333a1;
+  }
+  
