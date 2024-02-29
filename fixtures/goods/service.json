@@ -1,1 +1,1046 @@
-[{"model": "goods.service", "pk": 1, "fields": {"name": "Консультация врача специалиста", "price": 2000, "category": 8}}, {"model": "goods.service", "pk": 2, "fields": {"name": "Консультация врача специалиста (повторная)", "price": 1500, "category": 8}}, {"model": "goods.service", "pk": 3, "fields": {"name": "Консультация врача хирурга, доктора мед наук, врач УЗИ", "price": 2500, "category": 8}}, {"model": "goods.service", "pk": 4, "fields": {"name": "Вызов врача специалиста на дом", "price": 3000, "category": 8}}, {"model": "goods.service", "pk": 5, "fields": {"name": "Выдача повторных заключений", "price": 500, "category": 8}}, {"model": "goods.service", "pk": 6, "fields": {"name": "Повторная выдача рецепта(взамен испорченного/утеренного)", "price": 500, "category": 8}}, {"model": "goods.service", "pk": 7, "fields": {"name": "Иглорефлексотерапия", "price": 1000, "category": 14}}, {"model": "goods.service", "pk": 8, "fields": {"name": "Выполнение маневра Эпли", "price": 800, "category": 14}}, {"model": "goods.service", "pk": 9, "fields": {"name": "Тейпирование", "price": 600, "category": 14}}, {"model": "goods.service", "pk": 10, "fields": {"name": "ЭКГ( электрокардиограмма)", "price": 700, "category": 11}}, {"model": "goods.service", "pk": 11, "fields": {"name": "ЭЭГ( электроэнцефалография )", "price": 1500, "category": 11}}, {"model": "goods.service", "pk": 12, "fields": {"name": "РЭГ( реоэнцефалография )", "price": 1300, "category": 11}}, {"model": "goods.service", "pk": 13, "fields": {"name": "Анализ крови на уровень глюкозы", "price": 200, "category": 4}}, {"model": "goods.service", "pk": 14, "fields": {"name": "Изготовление индивидуальных стелек Fiziostep размер №1", "price": 4600, "category": 4}}, {"model": "goods.service", "pk": 15, "fields": {"name": "Изготовление индивидуальных стелек Fiziostep взрослая размер №2", "price": 5800, "category": 4}}, {"model": "goods.service", "pk": 16, "fields": {"name": "Изготовление индивидуальных стелек Fiziostep взрослая размер №3", "price": 6300, "category": 4}}, {"model": "goods.service", "pk": 17, "fields": {"name": "Курс закиси азота №10", "price": 6000, "category": 14}}, {"model": "goods.service", "pk": 18, "fields": {"name": "Остеоколл или Плексатрон 1 зона", "price": 700, "category": 4}}, {"model": "goods.service", "pk": 19, "fields": {"name": "Ренген обследование", "price": 1200, "category": 11}}, {"model": "goods.service", "pk": 20, "fields": {"name": "Сферогель медиум введение в МПДС позвоночного столба", "price": 10500, "category": 14}}, {"model": "goods.service", "pk": 21, "fields": {"name": "Блокада ПДС с использованием ультразвуковой навигации", "price": 4000, "category": 14}}, {"model": "goods.service", "pk": 22, "fields": {"name": "Магнитоакустическая терапия 1 процедура", "price": 400, "category": 14}}, {"model": "goods.service", "pk": 23, "fields": {"name": "Перевязка 1-й сложности(малая перевязка)", "price": 900, "category": 4}}, {"model": "goods.service", "pk": 24, "fields": {"name": "Перевязка 2-й сложности(большая перевязка)", "price": 1500, "category": 4}}, {"model": "goods.service", "pk": 25, "fields": {"name": "Снятие швов", "price": 800, "category": 4}}, {"model": "goods.service", "pk": 26, "fields": {"name": "Инъекция внутримышечная", "price": 300, "category": 4}}, {"model": "goods.service", "pk": 27, "fields": {"name": "Внутривенная инфузия капельная 800", "price": 800, "category": 4}}, {"model": "goods.service", "pk": 28, "fields": {"name": "Внутривенная инфузия струйная", "price": 600, "category": 4}}, {"model": "goods.service", "pk": 29, "fields": {"name": "Озонотерапия внутривенная", "price": 900, "category": 4}}, {"model": "goods.service", "pk": 30, "fields": {"name": "Ингаляция воздушно-кислородной смесью", "price": 200, "category": 4}}, {"model": "goods.service", "pk": 31, "fields": {"name": "Абонемент в тренажерный зал (первый месяц)", "price": 11000, "category": 7}}, {"model": "goods.service", "pk": 32, "fields": {"name": "Абонемент в тренажерный зал (второй месяц)", "price": 9000, "category": 7}}, {"model": "goods.service", "pk": 33, "fields": {"name": "Абонемент в тренажерный зал (третий месяц)", "price": 7500, "category": 7}}, {"model": "goods.service", "pk": 34, "fields": {"name": "Абонемент в тренажерный зал (четвертый месяц и последующие)", "price": 6000, "category": 7}}, {"model": "goods.service", "pk": 35, "fields": {"name": "Абонемент в тренажерный зал (Самостоятельный)", "price": 2500, "category": 7}}, {"model": "goods.service", "pk": 36, "fields": {"name": "Однократное посещение зала", "price": 1200, "category": 7}}]
+[
+    {
+        "model": "goods.service",
+        "pk": 1,
+        "fields": {
+            "name": "Консультация врача специалиста",
+            "price": 2000,
+            "category": null
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 2,
+        "fields": {
+            "name": "Консультация врача специалиста (повторная)",
+            "price": 1500,
+            "category": null
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 3,
+        "fields": {
+            "name": "Консультация врача хирурга, доктора мед наук, врач УЗИ",
+            "price": 2500,
+            "category": null
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 4,
+        "fields": {
+            "name": "Вызов врача специалиста на дом",
+            "price": 3000,
+            "category": null
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 5,
+        "fields": {
+            "name": "Выдача повторных заключений",
+            "price": 500,
+            "category": null
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 6,
+        "fields": {
+            "name": "Повторная выдача рецепта(взамен испорченного/утеренного)",
+            "price": 500,
+            "category": null
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 7,
+        "fields": {
+            "name": "Иглорефлексотерапия",
+            "price": 1000,
+            "category": 14
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 8,
+        "fields": {
+            "name": "Выполнение маневра Эпли",
+            "price": 800,
+            "category": 14
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 9,
+        "fields": {
+            "name": "Тейпирование",
+            "price": 600,
+            "category": 14
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 10,
+        "fields": {
+            "name": "ЭКГ( электрокардиограмма)",
+            "price": 700,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 11,
+        "fields": {
+            "name": "ЭЭГ( электроэнцефалография )",
+            "price": 1500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 12,
+        "fields": {
+            "name": "РЭГ( реоэнцефалография )",
+            "price": 1300,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 13,
+        "fields": {
+            "name": "Анализ крови на уровень глюкозы",
+            "price": 200,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 14,
+        "fields": {
+            "name": "Изготовление индивидуальных стелек Fiziostep размер №1",
+            "price": 4600,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 15,
+        "fields": {
+            "name": "Изготовление индивидуальных стелек Fiziostep взрослая размер №2",
+            "price": 5800,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 16,
+        "fields": {
+            "name": "Изготовление индивидуальных стелек Fiziostep взрослая размер №3",
+            "price": 6300,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 17,
+        "fields": {
+            "name": "Курс закиси азота №10",
+            "price": 6000,
+            "category": 14
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 18,
+        "fields": {
+            "name": "Остеоколл или Плексатрон 1 зона",
+            "price": 700,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 19,
+        "fields": {
+            "name": "Ренген обследование",
+            "price": 1200,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 20,
+        "fields": {
+            "name": "Сферогель медиум введение в МПДС позвоночного столба",
+            "price": 10500,
+            "category": 14
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 21,
+        "fields": {
+            "name": "Блокада ПДС с использованием ультразвуковой навигации",
+            "price": 4000,
+            "category": 14
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 22,
+        "fields": {
+            "name": "Магнитоакустическая терапия 1 процедура",
+            "price": 400,
+            "category": 14
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 23,
+        "fields": {
+            "name": "Перевязка 1-й сложности(малая перевязка)",
+            "price": 900,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 24,
+        "fields": {
+            "name": "Перевязка 2-й сложности(большая перевязка)",
+            "price": 1500,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 25,
+        "fields": {
+            "name": "Снятие швов",
+            "price": 800,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 26,
+        "fields": {
+            "name": "Инъекция внутримышечная",
+            "price": 300,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 27,
+        "fields": {
+            "name": "Внутривенная инфузия капельная 800",
+            "price": 800,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 28,
+        "fields": {
+            "name": "Внутривенная инфузия струйная",
+            "price": 600,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 29,
+        "fields": {
+            "name": "Озонотерапия внутривенная",
+            "price": 900,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 30,
+        "fields": {
+            "name": "Ингаляция воздушно-кислородной смесью",
+            "price": 200,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 31,
+        "fields": {
+            "name": "Абонемент в тренажерный зал (первый месяц)",
+            "price": 11000,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 32,
+        "fields": {
+            "name": "Абонемент в тренажерный зал (второй месяц)",
+            "price": 9000,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 33,
+        "fields": {
+            "name": "Абонемент в тренажерный зал (третий месяц)",
+            "price": 7500,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 34,
+        "fields": {
+            "name": "Абонемент в тренажерный зал (четвертый месяц и последующие)",
+            "price": 6000,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 35,
+        "fields": {
+            "name": "Абонемент в тренажерный зал (Самостоятельный)",
+            "price": 2500,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 36,
+        "fields": {
+            "name": "Однократное посещение зала",
+            "price": 1200,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 38,
+        "fields": {
+            "name": "Ангиография объемных образований",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 39,
+        "fields": {
+            "name": "Консультация врача УЗД",
+            "price": 300,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 40,
+        "fields": {
+            "name": "Аорта и ее ветви",
+            "price": 1800,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 41,
+        "fields": {
+            "name": "Артерии конечностей",
+            "price": 1900,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 42,
+        "fields": {
+            "name": "Артерия сонная",
+            "price": 1900,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 43,
+        "fields": {
+            "name": "Беременность 1 треместр ТАУЗИ",
+            "price": 900,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 44,
+        "fields": {
+            "name": "Беременность 1 треместр ТВУЗИ",
+            "price": 900,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 45,
+        "fields": {
+            "name": "Брахиоцефальные сосуды (шея)",
+            "price": 1800,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 46,
+        "fields": {
+            "name": "Брюшина",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 47,
+        "fields": {
+            "name": "Брюшная полость",
+            "price": 2000,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 48,
+        "fields": {
+            "name": "Вены конечностей",
+            "price": 1700,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 49,
+        "fields": {
+            "name": "Вилочковая железа",
+            "price": 550,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 50,
+        "fields": {
+            "name": "Глаза + допплер",
+            "price": 1800,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 51,
+        "fields": {
+            "name": "Глазные яблоки",
+            "price": 1200,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 52,
+        "fields": {
+            "name": "Глазные яблоки (для комиссии МСЭК)",
+            "price": 600,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 53,
+        "fields": {
+            "name": "Гортань + лимф узлы",
+            "price": 1000,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 54,
+        "fields": {
+            "name": "Дно полости рта с оценкой кровотока",
+            "price": 1200,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 55,
+        "fields": {
+            "name": "ЖКТ",
+            "price": 2000,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 56,
+        "fields": {
+            "name": "ЖКТ с эластометрией",
+            "price": 2400,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 57,
+        "fields": {
+            "name": "Желудок",
+            "price": 1000,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 58,
+        "fields": {
+            "name": "Желчный пузырь",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 59,
+        "fields": {
+            "name": "Женская половая сфера ТАУЗИ",
+            "price": 630,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 60,
+        "fields": {
+            "name": "Женская половая сфера ТВУЗИ",
+            "price": 750,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 61,
+        "fields": {
+            "name": "Жидкость в брюшной полости",
+            "price": 600,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 62,
+        "fields": {
+            "name": "ЖПС кровоток",
+            "price": 1000,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 63,
+        "fields": {
+            "name": "Забрюшинное пространство",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 64,
+        "fields": {
+            "name": "Имплант(1)",
+            "price": 600,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 65,
+        "fields": {
+            "name": "Кожа",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 66,
+        "fields": {
+            "name": "Кости",
+            "price": 600,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 67,
+        "fields": {
+            "name": "Кровоток",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 68,
+        "fields": {
+            "name": "Кровоток в воротной вене (допплер)",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 69,
+        "fields": {
+            "name": "Кровоток в половом члене",
+            "price": 1400,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 70,
+        "fields": {
+            "name": "Легкие",
+            "price": 600,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 71,
+        "fields": {
+            "name": "Легкие + плевра",
+            "price": 1100,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 72,
+        "fields": {
+            "name": "Лимфатические узлы первая группа",
+            "price": 700,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 73,
+        "fields": {
+            "name": "Молочные железы + лимфатические узлы",
+            "price": 1500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 74,
+        "fields": {
+            "name": "Молочные железы с эластометрией",
+            "price": 1800,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 75,
+        "fields": {
+            "name": "Мочевой пузырь",
+            "price": 600,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 76,
+        "fields": {
+            "name": "Мочевой пузырь с определением остаточной мочи",
+            "price": 600,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 77,
+        "fields": {
+            "name": "Мочеточники",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 78,
+        "fields": {
+            "name": "Мошонка с кровотоком",
+            "price": 1200,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 79,
+        "fields": {
+            "name": "Мошонка с эластографией",
+            "price": 1450,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 80,
+        "fields": {
+            "name": "Мягкие ткани с кровотоком",
+            "price": 1100,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 81,
+        "fields": {
+            "name": "Нерв",
+            "price": 1000,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 82,
+        "fields": {
+            "name": "ОБП + забр",
+            "price": 1750,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 83,
+        "fields": {
+            "name": "Пазухи носа",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 84,
+        "fields": {
+            "name": "Печень",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 85,
+        "fields": {
+            "name": "Печень с эластометрией  селезенка (для инфекционистов)",
+            "price": 1400,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 86,
+        "fields": {
+            "name": "Плевра",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 87,
+        "fields": {
+            "name": "Поджелудочная железа",
+            "price": 600,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 88,
+        "fields": {
+            "name": "Половой член с оценкой кровотока",
+            "price": 1500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 89,
+        "fields": {
+            "name": "Почки(сосуды)",
+            "price": 1900,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 90,
+        "fields": {
+            "name": "Почки + мочевой пузырь",
+            "price": 1650,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 91,
+        "fields": {
+            "name": "Почки с оценкой кровотока в среднем сегменте",
+            "price": 1400,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 92,
+        "fields": {
+            "name": "Предстательная железа с оценкой кровотока, определением остаточной мочи и эластографией",
+            "price": 1850,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 93,
+        "fields": {
+            "name": "Предстательная железа трузи с оценкой кровотока и определением остаточной мочи",
+            "price": 1700,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 94,
+        "fields": {
+            "name": "Селезенка",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 95,
+        "fields": {
+            "name": "Слюнные железы и регионарные лимфатические узлы",
+            "price": 1200,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 96,
+        "fields": {
+            "name": "Слюнные железы и регионарные лимфатические узлы + эластометрия",
+            "price": 1400,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 97,
+        "fields": {
+            "name": "Средостение",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 98,
+        "fields": {
+            "name": "Суставы ВНЧ",
+            "price": 700,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 99,
+        "fields": {
+            "name": "Суставы конечностей (1 группа)",
+            "price": 1200,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 100,
+        "fields": {
+            "name": "ТАУЗИ + ТВУЗИ +вены(ЖПС) гинекология",
+            "price": 1500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 101,
+        "fields": {
+            "name": "Транскраниальная доплерография",
+            "price": 2000,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 102,
+        "fields": {
+            "name": "Уретра",
+            "price": 650,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 103,
+        "fields": {
+            "name": "Функция ЖП",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 104,
+        "fields": {
+            "name": "Черная субстанция",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 105,
+        "fields": {
+            "name": "Щитовидная железа с оценкой кровотока",
+            "price": 1500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 106,
+        "fields": {
+            "name": "Щитовидная железа с оценкой кровотока и эластографией",
+            "price": 1650,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 107,
+        "fields": {
+            "name": "Эластография",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 108,
+        "fields": {
+            "name": "Эластография молочной железы",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 109,
+        "fields": {
+            "name": "Эластография печени",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 110,
+        "fields": {
+            "name": "Эластография поджелудочной железы",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 111,
+        "fields": {
+            "name": "Эластография почек",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 112,
+        "fields": {
+            "name": "Эластография предстательной железы",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 113,
+        "fields": {
+            "name": "Эластография селезенки",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 114,
+        "fields": {
+            "name": "Эластография щитовидной железы",
+            "price": 500,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 115,
+        "fields": {
+            "name": "Эхо (узи сердца)",
+            "price": 1900,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 116,
+        "fields": {
+            "name": "Эхо + плевральная полость",
+            "price": 2050,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.service",
+        "pk": 117,
+        "fields": {
+            "name": "ЖПС + вены",
+            "price": 1500,
+            "category": 11
+        }
+    }
+]

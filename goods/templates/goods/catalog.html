@@ -125,7 +125,7 @@
                                 <div class="carousel-inner">
                                     {% for staff_member in staff %}
                                         <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                                            <img src="{{ staff_member.image.url }}" class="d-block w-100" alt="..." style="max-width: 50%; height: auto;">
+                                            <img src="{{ staff_member.image.url }}" class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{ staff_member.name }}</h5>
                                                 <p>{{ staff_member.description }}</p>
@@ -146,6 +146,7 @@
                     </div>
                 </div>
             </div>
+            
             
         </div>
         
