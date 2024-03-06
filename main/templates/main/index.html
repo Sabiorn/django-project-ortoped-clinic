@@ -6,7 +6,7 @@
 <div class="container-fluid carousel-container">
   <div class="row justify-content-center">
     <!-- Левые контейнеры -->
-    <div class="col-lg-2 col-md-12 mt-md-4">
+    {% comment %} <div class="col-lg-2 col-md-12 mt-md-4">
       <div class="card mb-3" style="width: 18rem;">
         <div class="card-body bg-white">
             <h5 class="card-title">Невролог</h5>
@@ -25,7 +25,7 @@
             </a> 
         </div>
     </div>   
-  </div>
+    </div> {% endcomment %}
   
     
     <!-- Карусель -->
@@ -33,21 +33,21 @@
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="{% static "images/gymm.jpg" %}" class="d-block w-100" alt="...">
+            <img src="{% static "images/slide11.jpg" %}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block text-red bg-yellow">
               <h5>У нас работают лучшие специалисты.</h5>
               <p>Пациентов нашей клиники встречают и консультируют приветливые администраторы, лечат – внимательные и компетентные врачи.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{% static "images/slide1.jpg" %}" class="d-block w-100" alt="...">
+            <img src="{% static "images/slide22.png" %}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block text-red bg-yellow">
               <h5>Медтехника</h5>
               <p>На территории нашего медицинского центра работает магазин ортопедических товаров. В наличии имеются различные бандажи, ортезы, корсеты. Также, можно оформить заказ.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{% static "images/slide2.jpg" %}" class="d-block w-100" alt="...">
+            <img src="{% static "images/gymm.jpg" %}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block text-red bg-yellow">
               <h5>Тренажерный зал</h5>
               <p> Наш оздоровительно-тренажерный зал идеально подходит для новичков. Мы работаем под присмотром специалистов и по индивидуальной программе для каждого пациента. Проводятся как индивидуальные так и групповые занятия.</p>
@@ -66,7 +66,7 @@
     </div>
 
     <!-- Правые контейнеры -->
-    <div class="col-lg-2 col-md-12 mt-md-4">
+    {% comment %} <div class="col-lg-2 col-md-12 mt-md-4">
       <div class="card mb-3" style="width: 18rem;">
         <div class="card-body bg-white">
             <h5 class="card-title">Психолог</h5>
@@ -76,8 +76,7 @@
             </a>
         </div>
     </div>
-    
-      <div class="card mb-3" style="width: 18rem;">
+    <div class="card mb-3" style="width: 18rem;">
         <div class="card-body bg-white">
             <h5 class="card-title">Гастроэнтеролог</h5>
             <p class="card-text">Диагностика и лечение желудочно-кишечных проблем, забота о вашем здоровье.</p>
@@ -85,7 +84,7 @@
                 <img src="{% static "images/stomach.png" %}" alt="Запись">
             </a>
         </div>  
-    </div>
+    </div> {% endcomment %}
     
   </div>
 </div>
@@ -110,10 +109,121 @@
   <h1 class="title">Мы предлагаем нашим клиентам</h1>
 </div>
 
+{% comment %} <div class="categories-container">
+  <div class="category">
+      <div class="category-image">
+          <img src="{% static "images/doctor.png" %}" alt="Психология">
+      </div>
+      <h5><a href="{% url 'goods:catalog' 'psihologiya' %}">Психология</a></h5>
+  </div>
 
-<div class="text-center mt-4">
-  <a href="{% url 'goods:catalog' 'all' %}" class="btn btn-primary mb-3">Показать все услуги</a>
-</div> 
+  <div class="category">
+    <div class="category-image">
+        <img src="{% static "images/stomach.png" %}" alt="Гастроэнтеролог">
+    </div>
+    <h5><a href="{% url 'goods:catalog' 'gastroenterologiya' %}">Гастроэнтеролог</a></h5>
+  </div>
+
+  <div class="category">
+    <div class="category-image">
+        <img src="{% static "images/nurse.png" %}" alt="Невролог">
+    </div>
+    <h5><a href="{% url 'goods:catalog' 'nevrologiya' %}">Невролог</a></h5>
+  </div>
+
+  <div class="category">
+    <div class="category-image">
+        <img src="{% static "images/cardiology.png" %}" alt="Кардиолог">
+    </div>
+    <h5><a href="{% url 'goods:catalog' 'kardiologiya' %}">Кардиолог</a></h5>
+  </div>
+
+  <div class="category">
+    <div class="category-image">
+        <img src="{% static "images/hirurg.png" %}" alt="Хирург">
+    </div>
+    <h5><a href="{% url 'goods:catalog' 'hirurgiya' %}">Хирург</a></h5>
+  </div>
+
+  <div class="category">
+    <div class="category-image">
+        <img src="{% static "images/osteopat.png" %}" alt="Остеопат">
+    </div>
+    <h5><a href="{% url 'goods:catalog' 'osteopatiya' %}">Остеопат</a></h5>
+  </div>
+
+  <div class="category">
+    <div class="category-image">
+        <img src="{% static "images/x-ray.png" %}" alt="Аппаратное исследование">
+    </div>
+    <h5><a href="{% url 'goods:catalog' 'diagnostika' %}">Аппаратное исследование</a></h5>
+  </div>
+</div> {% endcomment %}
+<div class="xd">
+  <div class="categories-column">
+    <div class="category">
+      <p class="con"> Консультации специалистов</p>
+      <hr class="border border-primary only-one">
+      <div class="category-image">
+        <img src="{% static "images/doctor.png" %}" alt="Психология">
+      </div>
+      <h5><a href="{% url 'goods:catalog' 'psihologiya' %}">Психология</a></h5>
+    </div>
+
+    <div class="category">
+      <div class="category-image">
+        <img src="{% static "images/stomach.png" %}" alt="Гастроэнтеролог">
+      </div>
+      <h5><a href="{% url 'goods:catalog' 'gastroenterologiya' %}">Гастроэнтеролог</a></h5>
+    </div>
+
+    <div class="category">
+      <div class="category-image">
+        <img src="{% static "images/nurse.png" %}" alt="Невролог">
+      </div>
+      <h5><a href="{% url 'goods:catalog' 'nevrologiya' %}">Невролог</a></h5>
+    </div>
+
+    <div class="category">
+      <div class="category-image">
+        <img src="{% static "images/cardiology.png" %}" alt="Кардиолог">
+      </div>
+      <h5><a href="{% url 'goods:catalog' 'kardiologiya' %}">Кардиолог</a></h5>
+    </div>
+
+    <div class="category">
+      <div class="category-image">
+        <img src="{% static "images/hirurg.png" %}" alt="Хирург">
+      </div>
+      <h5><a href="{% url 'goods:catalog' 'hirurgiya' %}">Хирург</a></h5>
+    </div>
+
+    <div class="category">
+      <div class="category-image">
+        <img src="{% static "images/osteopat.png" %}" alt="Остеопат">
+      </div>
+      <h5><a href="{% url 'goods:catalog' 'osteopatiya' %}">Остеопат</a></h5>
+    </div>
+
+    <div class="category">
+      <div class="category-image">
+        <img src="{% static "images/x-ray.png" %}" alt="Аппаратное исследование">
+      </div>
+      <h5><a href="{% url 'goods:catalog' 'diagnostika' %}">Аппаратное исследование</a></h5>
+    </div>
+  </div>
+
+  <div class="large-image-container">
+    <div class="large-image">
+      <img src="{% static "images/clinica.jpg" %}" alt="Big Image">
+    </div>
+    <div class="large-image-overlay"></div>
+  </div>
+</div>
+
+
+
+
 
 
 {% endblock content %}

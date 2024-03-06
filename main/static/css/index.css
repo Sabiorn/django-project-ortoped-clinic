@@ -63,7 +63,7 @@ body {
 
 .carousel-inner, .carousel-item {
     height: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .carousel-container {
@@ -139,10 +139,10 @@ figure {
 hr.only-one {
     margin-left: 15%; /* Задаем отступ слева */
     margin-right: 15%; /* Задаем отступ справа */
-    border-color: #ebebeb !important;
+    border-color: #1634c93a !important;
     border-width: 3px !important;
     opacity: 0.75 !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
 }
 
 .border-primary {
@@ -167,7 +167,7 @@ hr.only-one {
   font-size: 36px;
   font-weight: bold;
   color: #333; /* цвет текста */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* тень текста */
+
 }
 
 .custom {
@@ -178,7 +178,7 @@ hr.only-one {
 }
 
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon1, .carousel-control-next-icon1 {
     background-image: none;
 }
 
@@ -221,5 +221,91 @@ hr.only-one {
     padding-left: 20px;
     text-align: left;
     color: #333333a1;
+  }
+  
+
+
+
+
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+/* Глав страница консультации */
+
+.xd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .categories-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 50px; /* Отступ слева */
+  }
+  
+  .category {
+    margin-bottom: 10px; /* Регулируйте это значение по вашему усмотрению */
+  }
+  
+.large-image img {
+  border-radius: 10px; /* Скругление углов */
+  max-width: 800px; /* Максимальная ширина изображения */
+  max-height: 1600px; /* Максимальная высота изображения */
+  width: auto; /* Автоматическое вычисление ширины */
+  height: auto; /* Автоматическое вычисление высоты */
+  overflow: hidden; /* Обрезание скругленных углов */
+  margin-top: -50px; /* Верхний отступ */
+}
+
+.large-image-container {
+    position: relative;
+  }
+  
+  .large-image {
+    position: relative;
+    border-radius: 10px; /* Скругление углов */
+    max-width: 800px; /* Максимальная ширина изображения */
+    max-height: 1600px; /* Максимальная высота изображения */
+    width: auto; /* Автоматическое вычисление ширины */
+    height: auto; /* Автоматическое вычисление высоты */
+    overflow: hidden; /* Обрезание скругленных углов */
+  }
+  
+  .large-image-overlay {
+    position: absolute;
+    top: -60px; /* Отступ вверх, чтобы выходить за пределы изображения */
+    right: -60px; /* Отступ вправо, чтобы выходить за пределы изображения */
+    width: calc(100% + 20px); /* Ширина рамки */
+    height: calc(100% + 20px); /* Высота рамки */
+    background-color: rgba(98, 98, 98, 0.458); /* Цвет рамки */
+    z-index: -1; /* Размещаем за основным изображением */
+    border-radius: 10px; /* Скругление углов */
+    overflow: hidden; /* Обрезание скругленных углов */
+  }
+
+  /* Глав страница консультации */
+
+  .con {
+    font-weight: bold; /* Жирный текст */
+    font-size: 24px; /* Увеличенный размер шрифта */
+    color: #333; /* цвет текста */
+
+  }
+  .categories-column a {
+    color: #333; /* Цвет ссылок */
   }
   
